@@ -216,6 +216,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Spaceship
       objectReference: {fileID: 0}
+    - target: {fileID: 5461823687071156656, guid: 31bc40a26f367fb4a80db14044be6922,
+        type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     - target: {fileID: 5461823687071156662, guid: 31bc40a26f367fb4a80db14044be6922,
         type: 3}
       propertyPath: m_LocalPosition.x
