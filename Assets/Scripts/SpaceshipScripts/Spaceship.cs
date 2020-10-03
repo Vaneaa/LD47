@@ -12,6 +12,8 @@ public class Spaceship : MonoBehaviour
     public static float spaceshipVerticalSpeed = 0;
     public const float MAX_SPEED = 12;
     float speedModifier = 0.005f;
+
+    public static float fuel = 100f;
     // Start is called before the first frame update
 
 
@@ -26,31 +28,41 @@ public class Spaceship : MonoBehaviour
         Vector3 horizontalMove = new Vector3(Input.GetAxis("Horizontal"), 0, 0);
         Vector3 verticalMove = new Vector3(0, Input.GetAxis("Vertical"), 0);
 
-        if (horizontalMove.x != 0)
+
+        // Thrusting
+        if (fuel > 0.005f)
         {
-            if (horizontalMove.x > 0)
+            if (horizontalMove.x != 0)
             {
-                spaceshipHorizontalSpeed = spaceshipHorizontalSpeed + speedModifier;
+                fuel = fuel - 0.00117f;
+                if (horizontalMove.x > 0)
+                {
+                    
+                    spaceshipHorizontalSpeed = spaceshipHorizontalSpeed + speedModifier;
+                }
+                else
+                {
+                    spaceshipHorizontalSpeed = spaceshipHorizontalSpeed - speedModifier * 0.25f;
+                }
             }
-            else
+            if (verticalMove.y != 0)
             {
-                spaceshipHorizontalSpeed = spaceshipHorizontalSpeed - speedModifier * 0.25f;
+                fuel = fuel - 0.00117f;
+                if (verticalMove.y > 0)
+                {
+                    spaceshipVerticalSpeed = spaceshipVerticalSpeed + speedModifier * 1.5f ;
+                }
+                else
+                {
+                    spaceshipVerticalSpeed = spaceshipVerticalSpeed - speedModifier * 1.5f;
+                }
             }
+            ;
         }
-        if (verticalMove.y != 0)
-        {
-            if (verticalMove.y > 0)
-            {
-                spaceshipVerticalSpeed = spaceshipVerticalSpeed + speedModifier * 0.75f;
-            }
-            else
-            {
-                spaceshipVerticalSpeed = spaceshipVerticalSpeed - speedModifier * 0.75f;
-            }
-        }
+        print(fuel);
 
         // ship movement for testing
-        transform.position +=  VertricalMovment();
+        transform.position += VertricalMovment();
 
         // Horizontal movement speed cap
         if (spaceshipHorizontalSpeed > MAX_SPEED)
@@ -84,6 +96,8 @@ public class Spaceship : MonoBehaviour
         {
             spaceshipVerticalSpeed = spaceshipVerticalSpeed + speedModifier * 0.05f;
         }
+
+
     }
 
     public Vector3 HorizontalMovment()
