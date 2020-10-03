@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 8053497756707591775}
   - component: {fileID: 2771792443446087902}
   - component: {fileID: -8339280272879995733}
+  - component: {fileID: -2304643650587430692}
   m_Layer: 0
   m_Name: Particulate
   m_TagString: Hazard
@@ -99,3 +100,15 @@ MonoBehaviour:
   speedBonusMax: 1
   speedBonusMin: 0.1
   hp: 1
+--- !u!114 &-2304643650587430692
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6045452653306011364}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 789ddc4d713dd8142b8d2cd296c720a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4412718725400364595}
   - component: {fileID: 4062901430998164950}
   - component: {fileID: -6246842834857055859}
+  - component: {fileID: 4597515850682773739}
   m_Layer: 0
   m_Name: MeteorSmall
   m_TagString: Hazard
@@ -99,3 +100,15 @@ MonoBehaviour:
   speedBonusMax: 1
   speedBonusMin: 0.1
   hp: 1
+--- !u!114 &4597515850682773739
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7293748817156497704}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23436c2184928a044be023f32f0af725, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
