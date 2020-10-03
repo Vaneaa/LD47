@@ -37,6 +37,6 @@ public class Hazard : MonoBehaviour
             print("station hit!");
             Destroy(this.gameObject);
         }
-        transform.position = new Vector2(transform.position.x - (speed + speedBonus ) * Time.deltaTime, transform.position.y);
+        transform.position = new Vector2(transform.position.x - (speed + speedBonus + plr.GetComponent<Spaceship>().HorizontalMovment().x) * Time.deltaTime, transform.position.y);
     }
 }
