@@ -13,13 +13,25 @@ public class Spaceship : MonoBehaviour
     public const float MAX_SPEED = 12;
     float speedModifier = 0.005f;
 
-    public static float fuel = 100f;
+    public float fuel = 100f;
+
+    public Lazer lazer;
+
     // Start is called before the first frame update
-
-
     void Start()
     {
+        lazer = Resources.LoadAll<Lazer>("Lazer")[0];
+        //lazer = GameObject.Find("Lazer").GetComponent<Lazer>();
 
+    }
+
+    void   FixedUpdate()
+    {
+        if (Input.GetKey("space") || Input.GetKey("z"))
+        {
+            print("Space was pressed");
+            ShootLazer();
+        }
     }
 
     // Update is called once per frame
@@ -28,7 +40,8 @@ public class Spaceship : MonoBehaviour
         Vector3 horizontalMove = new Vector3(Input.GetAxis("Horizontal"), 0, 0);
         Vector3 verticalMove = new Vector3(0, Input.GetAxis("Vertical"), 0);
 
-
+        // lazer
+        
         // Thrusting
         if (fuel > 0.005f)
         {
@@ -59,7 +72,7 @@ public class Spaceship : MonoBehaviour
             }
             ;
         }
-        print(fuel);
+        //print(fuel);
 
         // ship movement for testing
         //transform.position += HorizontalMovment();
@@ -108,5 +121,11 @@ public class Spaceship : MonoBehaviour
     public Vector3 VertricalMovment()
     {
         return (new Vector3(0, 1, 0)) * spaceshipVerticalSpeed * Time.deltaTime;
+    }
+
+    void ShootLazer()
+    {
+        print(lazer);
+        Instantiate(lazer, new Vector3(transform.position.x, transform.position.y, 0), transform.rotation);
     }
 }
