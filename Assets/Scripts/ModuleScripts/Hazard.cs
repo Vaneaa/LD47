@@ -20,12 +20,23 @@ public class Hazard : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Vector2.Distance(plr.transform.position, this.transform.position) < hitboxSize)
+        if (transform.position.x < plr.transform.position.x + 0.5 && transform.position.x > plr.transform.position.x - 0.5
+            && transform.position.y < plr.transform.position.y + 1 && transform.position.y > plr.transform.position.y - 1)
         {
+            //check for solar array hits on player
+            if(transform.position.y > plr.transform.position.y + 0.1f)
+            {
+                //solar array L hit
+            }
+            else if(transform.position.y < plr.transform.position.y - 0.1f)
+            {
+                //solar array R hit
+            }
+
             //player damage here
             print("station hit!");
             Destroy(this.gameObject);
         }
-        transform.position = new Vector2(transform.position.x - (speed + speedBonus) * Time.deltaTime, transform.position.y);
+        transform.position = new Vector2(transform.position.x - (speed + speedBonus ) * Time.deltaTime, transform.position.y);
     }
 }
