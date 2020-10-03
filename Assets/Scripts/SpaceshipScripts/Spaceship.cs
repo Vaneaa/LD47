@@ -50,8 +50,7 @@ public class Spaceship : MonoBehaviour
         }
 
         // ship movement for testing
-        //transform.position += HorizontalMovment();
-        //transform.position += VertricalMovment();
+        transform.position +=  VertricalMovment();
 
         // Horizontal movement speed cap
         if (spaceshipHorizontalSpeed > MAX_SPEED)
