@@ -16,7 +16,7 @@ public class OrbitalNavigator : MonoBehaviour
     void calculateOrbitalPath(float velocity)
     {
         int nextModule = (int)Mathf.Floor(velocity);
-        moduleDirector.selectNextModule(nextModule);
+        moduleDirector.selectNextModule();
     }
 
     // Update is called once per frame

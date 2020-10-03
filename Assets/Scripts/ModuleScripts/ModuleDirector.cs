@@ -7,25 +7,35 @@ public class ModuleDirector : MonoBehaviour
     public GameObject[] moduleList;
     GameObject nextModule;
     List<GameObject> incomingModules;
+    float totalSpeedMod = 0.1f;
     // Start is called before the first frame update
     void Start()
     {
         moduleList = Resources.LoadAll<GameObject>("Modules");
     }
 
-    void sampleModuleChoices()
+    public void sampleModuleChoices()
     {
         List<GameObject> modules = new List<GameObject>();
-        for(int i=0; i > 2; i++)
+        for(int i=0; i < 2; i++)
         {
-            modules.Add(moduleList[Random.Range(0, moduleList.Length - 1)]);
+            modules.Add(moduleList[Random.Range(0, moduleList.Length)]);
+            print("module added to pool");
         }
         incomingModules = modules;
     }
 
-    public void selectNextModule(int next)
+    public void selectNextModule()
     {
+        if(totalSpeedMod < 0.15)
+        {
+            totalSpeedMod += 0.05f;
+        }
+        print("# of modules" + incomingModules.Count.ToString());
+        int next = 0;
         nextModule = incomingModules[next];
+        GameObject module = Instantiate(nextModule, new Vector3(25, 0, 0), Quaternion.identity);
+        module.GetComponent<ModuleData>().moduleDirector = this.gameObject.GetComponent<ModuleDirector>();
     }
 
     // Update is called once per frame
