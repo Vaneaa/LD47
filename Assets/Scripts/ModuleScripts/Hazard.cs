@@ -12,31 +12,64 @@ public class Hazard : MonoBehaviour
     float speedBonus;
     public int hp = 1;
     GameObject plr;
-    void Start()
+    public delegate void onCollide();
+    protected onCollide collideBase;
+    protected onCollide collideSAL;
+    protected onCollide collideSAR;
+
+    void defaultCollideBase()
     {
+        print("station hit!");
+        Destroy(this.gameObject);
+    }
+    void defaultCollideSAL()
+    {
+        //solar array L collision
+    }
+    void defaultCollideSAR()
+    {
+        //solar array R collision
+    }
+
+
+
+    protected void init() //place inside Start() to facilitate easy children
+    {
+        collideBase = new onCollide(defaultCollideBase);
+        collideSAL = new onCollide(defaultCollideSAL);
+        collideSAR = new onCollide(defaultCollideSAR);
         plr = GameObject.FindGameObjectWithTag("Player");
         speedBonus = Random.Range(speedBonusMin, speedBonusMax);
     }
-    // Update is called once per frame
-    void Update()
+    protected void run() //place inside Start() to facilitate easy children
     {
         if (transform.position.x < plr.transform.position.x + 0.5 && transform.position.x > plr.transform.position.x - 0.5
             && transform.position.y < plr.transform.position.y + 1 && transform.position.y > plr.transform.position.y - 1)
         {
             //check for solar array hits on player
-            if(transform.position.y > plr.transform.position.y + 0.1f)
+            if (transform.position.y > plr.transform.position.y + 0.1f)
             {
                 //solar array L hit
+                collideSAL();
             }
-            else if(transform.position.y < plr.transform.position.y - 0.1f)
+            else if (transform.position.y < plr.transform.position.y - 0.1f)
             {
                 //solar array R hit
+                collideSAR();
             }
 
             //player damage here
-            print("station hit!");
-            Destroy(this.gameObject);
+            collideBase();
         }
         transform.position = new Vector2(transform.position.x - (speed + speedBonus + plr.GetComponent<Spaceship>().HorizontalMovment().x) * Time.deltaTime, transform.position.y);
+    }
+   
+    void Start()
+    {
+        init();
+    }
+    void Update()
+    {
+        run();
     }
 }

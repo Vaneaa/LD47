@@ -5,7 +5,8 @@ public class ModuleData : MonoBehaviour
 {
     Spaceship plr;
     public ModuleDirector moduleDirector;
-    public float speedMod = 0.1f;
+    public float speedMod = 0.001f;
+    public string type;
     bool dead = false;
 
     private void Start()
@@ -18,7 +19,7 @@ public class ModuleData : MonoBehaviour
     {
         if(this.transform.position.x < 10 && dead == false)
         {
-            moduleDirector.sampleModuleChoices();
+            //moduleDirector.sampleModuleChoices();
             moduleDirector.selectNextModule();
             dead = true;
         }

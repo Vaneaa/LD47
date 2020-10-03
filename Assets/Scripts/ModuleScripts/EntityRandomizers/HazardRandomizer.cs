@@ -21,7 +21,7 @@ public class HazardRandomizer : MonoBehaviour
     {
         satellites = Resources.LoadAll<Sprite>("PixelArt/satellites");
         medMeteors = Resources.LoadAll<Sprite>("PixelArt/Med_Meteors");
-        smlMeteors = Resources.LoadAll<Sprite>("PixelArt/Sml_Meteors");
+        smlMeteors = Resources.LoadAll<Sprite>("PixelArt/Sml_Meteor");
         clouds = Resources.LoadAll<Sprite>("PixelArt/Particulate_Clouds");
     }
 
