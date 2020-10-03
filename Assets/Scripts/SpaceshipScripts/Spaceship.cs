@@ -59,7 +59,7 @@ public class Spaceship : MonoBehaviour
             }
             ;
         }
-        print(fuel);
+        //print(fuel);
 
         // ship movement for testing
         //transform.position += HorizontalMovment();

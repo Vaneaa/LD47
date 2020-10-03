@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 8053497756707591775}
   - component: {fileID: 2771792443446087902}
-  - component: {fileID: -8339280272879995733}
   - component: {fileID: -2304643650587430692}
+  - component: {fileID: 6781489586484414327}
   m_Layer: 0
   m_Name: Particulate
   m_TagString: Hazard
@@ -83,23 +83,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &-8339280272879995733
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6045452653306011364}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa70a17b585c0e2468b0e2b2f4b6cf88, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 0.2
-  hitboxSize: 0.3
-  speedBonusMax: 1
-  speedBonusMin: 0.1
-  hp: 1
 --- !u!114 &-2304643650587430692
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -112,3 +95,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 789ddc4d713dd8142b8d2cd296c720a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &6781489586484414327
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6045452653306011364}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 617fa19ee0ea72f44b666c332757ab20, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 0.1
+  hitboxSize: 1.5
+  speedBonusMax: 1
+  speedBonusMin: 0.1
+  hp: 1
