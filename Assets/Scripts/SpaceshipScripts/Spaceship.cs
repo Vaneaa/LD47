@@ -8,7 +8,7 @@ using UnityEngine;
 public class Spaceship : MonoBehaviour
 {
 
-    public static float spaceshipHorizontalSpeed = 0;
+    public float spaceshipHorizontalSpeed = 0;
     public static float spaceshipVerticalSpeed = 0;
     public const float MAX_SPEED = 12;
     float speedModifier = 0.005f;
@@ -62,6 +62,7 @@ public class Spaceship : MonoBehaviour
         print(fuel);
 
         // ship movement for testing
+        //transform.position += HorizontalMovment();
         transform.position += VertricalMovment();
 
         // Horizontal movement speed cap
@@ -102,7 +103,7 @@ public class Spaceship : MonoBehaviour
 
     public Vector3 HorizontalMovment()
     {
-        return (new Vector3(1, 0, 0)) * spaceshipHorizontalSpeed * Time.deltaTime;
+        return (new Vector3(1, 0, 0)) * spaceshipHorizontalSpeed;
     }
     public Vector3 VertricalMovment()
     {

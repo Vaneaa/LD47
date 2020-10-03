@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class ModuleDirector : MonoBehaviour
 {
+    Spaceship plr;
     public GameObject[] moduleList;
     GameObject nextModule;
     List<GameObject> incomingModules;
@@ -11,6 +12,7 @@ public class ModuleDirector : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        plr = GameObject.Find("Spaceship").GetComponent<Spaceship>();
         moduleList = Resources.LoadAll<GameObject>("Modules");
     }
 
@@ -32,7 +34,7 @@ public class ModuleDirector : MonoBehaviour
             totalSpeedMod += 0.05f;
         }
         print("# of modules" + incomingModules.Count.ToString());
-        int next = 0;
+        int next = (int)Mathf.Floor(plr.spaceshipHorizontalSpeed / 12);
         nextModule = incomingModules[next];
         GameObject module = Instantiate(nextModule, new Vector3(25, 0, 0), Quaternion.identity);
         module.GetComponent<ModuleData>().moduleDirector = this.gameObject.GetComponent<ModuleDirector>();
