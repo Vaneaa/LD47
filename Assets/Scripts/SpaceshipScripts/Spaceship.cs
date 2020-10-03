@@ -13,7 +13,7 @@ public class Spaceship : MonoBehaviour
     public const float MAX_SPEED = 12;
     float speedModifier = 0.005f;
 
-    public static float fuel = 100f;
+    public float fuel = 100f;
     // Start is called before the first frame update
 
 
