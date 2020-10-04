@@ -33,6 +33,9 @@ public class Spaceship : MonoBehaviour
 
     public float shieldEnergyCost = 0.35f;
     public bool shieldActive = false;
+
+    public SpriteRenderer leftSolar;
+    public SpriteRenderer rightSolar;
     // Start is called before the first frame update
     void Start()
     {
@@ -40,7 +43,8 @@ public class Spaceship : MonoBehaviour
         shield = GameObject.Find("Shield");
         cannon = Resources.LoadAll<GameObject>("Cannon")[0];
         shieldAnimator = shield.GetComponent<SpriteAnimator>();
-        //lazer = GameObject.Find("Lazer").GetComponent<Lazer>();
+        leftSolar = GameObject.Find("SolarArrayL").GetComponent<SpriteRenderer>();
+        rightSolar = GameObject.Find("SolarArrayR").GetComponent<SpriteRenderer>();
 
     }
 
@@ -72,8 +76,22 @@ public class Spaceship : MonoBehaviour
         Vector3 verticalMove = new Vector3(0, Input.GetAxis("Vertical"), 0);
 
         //solar arrays can't fall under 0hp
-        if (leftSolarHP <= 0) leftSolarHP = 0;
-        if (rightSolarHP <= 0) rightSolarHP = 0;
+        if (leftSolarHP <= 0) 
+        {
+            leftSolarHP = 0;
+            leftSolar.enabled = false;
+        }else if(!leftSolar.enabled)
+        {
+            leftSolar.enabled = true;
+        }
+        if (rightSolarHP <= 0) 
+        {
+            rightSolarHP = 0;
+            rightSolar.enabled = false;
+        }else if(!rightSolar.enabled)
+        {
+            rightSolar.enabled = true;
+        }
 
         //get lazer input
         if (lazerShotDelay.go() && Input.GetButton("Lazer"))
@@ -126,6 +144,9 @@ public class Spaceship : MonoBehaviour
             setShieldStatus(false);
             energy = 0;
         }
+        if (energy > 100){
+            energy = 100;
+        }
         // core HP
         if(HP > 100)
         {
@@ -133,9 +154,18 @@ public class Spaceship : MonoBehaviour
         }
         else if (HP <= 0)
         {
+            HP = 0;
             //energy = 0;
             //fuel = 0;
 
+        }
+
+        // fuel
+        if (fuel > 100){
+            fuel = 100;
+        }
+        else if(fuel < 0){
+            fuel = 0;
         }
         
         // Thrusting
