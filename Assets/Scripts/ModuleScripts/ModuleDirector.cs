@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class ModuleDirector : MonoBehaviour
 {
+    FrameTimer moduleSpawnRate = new FrameTimer(240);
     Spaceship plr;
     public GameObject[] moduleList;
     GameObject nextModule;
@@ -49,13 +50,15 @@ public class ModuleDirector : MonoBehaviour
 
     public void selectNextModule()
     {
+        /*
         if(totalSpeedMod < 0.15)
         {
             totalSpeedMod += 0.05f;
         }
+        */
         print("module generated.");
         nextModule = selectedModuleType[Random.Range(0, selectedModuleType.Count-1)];
-        GameObject module = Instantiate(nextModule, new Vector3(25, 0, 0), Quaternion.identity);
+        GameObject module = Instantiate(nextModule, new Vector3(30, 0, 0), Quaternion.identity);
         module.GetComponent<ModuleData>().moduleDirector = this.gameObject.GetComponent<ModuleDirector>();
     }
     int getStationCourse()
@@ -64,6 +67,11 @@ public class ModuleDirector : MonoBehaviour
     }
     void Update()
     {
+
+        if(moduleSpawnRate.go())
+        {
+            selectNextModule();
+        }
 
         if (getStationCourse() == 0) pathui.p1.color = new Color(0.7f, 0.7f, 0.0f); else pathui.p1.color = new Color(0.0f, 0.7f, 0.0f);
         if (getStationCourse() == 1) pathui.p2.color = new Color(0.7f, 0.7f, 0.0f); else pathui.p2.color = new Color(0.0f, 0.7f, 0.0f);

@@ -150,7 +150,7 @@ public class Spaceship : MonoBehaviour
         solarEfficiency = (leftSolarHP * 0.5f + rightSolarHP * 0.5f)/100f;
         if( energy < 100f)
         {
-            energy += solarEfficiency * 0.01f;
+            energy += solarEfficiency * 0.05f;
         }
         else
         {
@@ -187,11 +187,11 @@ public class Spaceship : MonoBehaviour
         }
         
         // Thrusting
-        if (fuel > 0.005f)
+        if (fuel > 0.009f)
         {
             if (horizontalMove.x != 0)
             {
-                fuel = fuel - 0.00117f;
+                fuel = fuel - 0.01f;
                 if (horizontalMove.x > 0)
                 {
                     
@@ -199,12 +199,12 @@ public class Spaceship : MonoBehaviour
                 }
                 else
                 {
-                    spaceshipHorizontalSpeed = spaceshipHorizontalSpeed - speedModifier * 0.25f;
+                    spaceshipHorizontalSpeed = spaceshipHorizontalSpeed - speedModifier * 0.75f;
                 }
             }
             if (verticalMove.y != 0)
             {
-                fuel = fuel - 0.00117f;
+                fuel = fuel - 0.01f;
                 if (verticalMove.y > 0)
                 {
                     if(spaceshipVerticalSpeed >= 0)

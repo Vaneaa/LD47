@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8562062864449591934}
   - component: {fileID: 8562062864449591935}
   - component: {fileID: 73569336626442743}
-  - component: {fileID: 4345475153063668706}
+  - component: {fileID: 8608808335007799062}
   m_Layer: 0
   m_Name: MeteorLarge
   m_TagString: Hazard
@@ -99,10 +99,10 @@ MonoBehaviour:
   hitboxSize: 2
   speedBonusMax: 1
   speedBonusMin: 0.1
-  shieldDamageMod: 3
+  shieldDamageMod: 100
   hp: 5
   boom: {fileID: 2182307124411986111, guid: 33026e9d414bbdd47a03c42e804ac833, type: 3}
---- !u!114 &4345475153063668706
+--- !u!114 &8608808335007799062
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -111,6 +111,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 8562062864449591932}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c1429f854a23fca438d4d39ee0d0ee16, type: 3}
+  m_Script: {fileID: 11500000, guid: 30d758b45e90d174b9d55e84edd1781e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

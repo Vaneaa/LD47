@@ -28,22 +28,30 @@ public class Hazard : MonoBehaviour
 
     void defaultCollideBase()
     {
-        if (plr.GetComponent<Spaceship>().shieldActive == false) plr.GetComponent<Spaceship>().HP -= 15;
-        else plr.GetComponent<Spaceship>().energy -= hp + shieldDamageMod;
+        if (plr.GetComponent<Spaceship>().shieldActive == false) plr.GetComponent<Spaceship>().HP -= hpMax;
+        else plr.GetComponent<Spaceship>().energy -= hpMax + shieldDamageMod;
 
         Explode();
     }
     void defaultCollideSAL()
     {
         //solar array L collision
-        if (plr.GetComponent<Spaceship>().shieldActive == false)  plr.GetComponent<Spaceship>().leftSolarHP -= 15;
-        else plr.GetComponent<Spaceship>().energy -= hp + shieldDamageMod;
+        if (plr.GetComponent<Spaceship>().shieldActive == false)
+        {
+            plr.GetComponent<Spaceship>().leftSolarHP -= hpMax;
+            plr.GetComponent<Spaceship>().HP -= hpMax;
+        }
+        else plr.GetComponent<Spaceship>().energy -= hpMax + shieldDamageMod;
         Explode();
     }
     void defaultCollideSAR()
     {
         //solar array R collision
-        if (plr.GetComponent<Spaceship>().shieldActive == false) plr.GetComponent<Spaceship>().rightSolarHP -= 15;
+        if (plr.GetComponent<Spaceship>().shieldActive == false)
+        {
+            plr.GetComponent<Spaceship>().rightSolarHP -= hpMax;
+            plr.GetComponent<Spaceship>().HP -= hpMax;
+        }
         else plr.GetComponent<Spaceship>().energy -= hp + shieldDamageMod;
         Explode();
     }
@@ -130,7 +138,7 @@ public class Hazard : MonoBehaviour
         transform.position = new Vector2(transform.position.x - (speed + speedBonus + plr.GetComponent<Spaceship>().HorizontalMovment().x) * Time.deltaTime, transform.position.y);
     }
    
-    protected void Explode()
+    public void Explode()
     {
         if (boom != null)
         {

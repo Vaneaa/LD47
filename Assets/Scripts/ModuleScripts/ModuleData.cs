@@ -17,10 +17,10 @@ public class ModuleData : MonoBehaviour
 
     void Update()
     {
-        if(this.transform.position.x < 10 && dead == false)
+        if(this.transform.position.x < 14 && dead == false)
         {
             //moduleDirector.sampleModuleChoices();
-            moduleDirector.selectNextModule();
+            //moduleDirector.selectNextModule();
             dead = true;
         }
         if(this.transform.position.x < -25)

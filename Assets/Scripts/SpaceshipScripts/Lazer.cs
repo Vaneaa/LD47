@@ -23,5 +23,20 @@ public class Lazer : MonoBehaviour
             Destroy(this.gameObject);
         }
     }
+
+    private void OnDestroy()
+    {
+        if(this.gameObject.tag == "Cannon")
+        {
+            GameObject[] hazList = GameObject.FindGameObjectsWithTag("Hazard");
+            foreach(GameObject hazard in hazList)
+            {
+                if(Vector2.Distance(hazard.transform.position, this.transform.position) < 4f)
+                {
+                    hazard.GetComponent<Hazard>().Explode();
+                }              
+            }
+        }
+    }
 }
  

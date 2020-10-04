@@ -99,7 +99,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moduleDirector: {fileID: 0}
-  speedMod: 0.05
+  speedMod: 0.005
   type: b
 --- !u!1001 &849255870873200771
 PrefabInstance:
