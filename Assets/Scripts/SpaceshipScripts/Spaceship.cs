@@ -36,6 +36,9 @@ public class Spaceship : MonoBehaviour
 
     public SpriteRenderer leftSolar;
     public SpriteRenderer rightSolar;
+
+    public SpriteRenderer leftSolarDamaged;
+    public SpriteRenderer rightSolarDamaged;
     // Start is called before the first frame update
     void Start()
     {
@@ -45,6 +48,8 @@ public class Spaceship : MonoBehaviour
         shieldAnimator = shield.GetComponent<SpriteAnimator>();
         leftSolar = GameObject.Find("SolarArrayL").GetComponent<SpriteRenderer>();
         rightSolar = GameObject.Find("SolarArrayR").GetComponent<SpriteRenderer>();
+        leftSolarDamaged = GameObject.Find("SolarArrayLDamaged").GetComponent<SpriteRenderer>();
+        rightSolarDamaged = GameObject.Find("SolarArrayRDamaged").GetComponent<SpriteRenderer>();
 
     }
 
@@ -80,17 +85,30 @@ public class Spaceship : MonoBehaviour
         {
             leftSolarHP = 0;
             leftSolar.enabled = false;
-        }else if(!leftSolar.enabled)
+            leftSolarDamaged.enabled = false;
+        }else if(!leftSolar.enabled && leftSolarHP == 100)
         {
             leftSolar.enabled = true;
+        }else if(!leftSolarDamaged.enabled && leftSolarHP < 100)
+        {
+            
+            leftSolar.enabled = false;
+            leftSolarDamaged.enabled = true;
         }
+
         if (rightSolarHP <= 0) 
         {
             rightSolarHP = 0;
             rightSolar.enabled = false;
-        }else if(!rightSolar.enabled)
+            rightSolarDamaged.enabled = false;
+        }else if(!rightSolar.enabled && rightSolarHP == 100)
         {
             rightSolar.enabled = true;
+        }else if(!rightSolarDamaged.enabled && rightSolarHP < 100)
+        {
+            
+            rightSolar.enabled = false;
+            rightSolarDamaged.enabled = true;
         }
 
         //get lazer input
