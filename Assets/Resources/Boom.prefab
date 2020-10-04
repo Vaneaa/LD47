@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &8562062864449591932
+--- !u!1 &2182307124411986111
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,38 +8,38 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 8562062864449591934}
-  - component: {fileID: 8562062864449591935}
-  - component: {fileID: 73569336626442743}
-  - component: {fileID: 4345475153063668706}
+  - component: {fileID: 6096817585577622689}
+  - component: {fileID: 7371540809957411249}
+  - component: {fileID: 245984127547110290}
+  - component: {fileID: 7003642528999724084}
   m_Layer: 0
-  m_Name: MeteorLarge
-  m_TagString: Hazard
+  m_Name: Boom
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &8562062864449591934
+--- !u!4 &6096817585577622689
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8562062864449591932}
+  m_GameObject: {fileID: 2182307124411986111}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.15900977, y: -0.54873735, z: -2.060904}
-  m_LocalScale: {x: 8, y: 8, z: 1}
+  m_LocalPosition: {x: 0.4436003, y: 0.023072716, z: -92.234375}
+  m_LocalScale: {x: 4, y: 4, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &8562062864449591935
+--- !u!212 &7371540809957411249
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8562062864449591932}
+  m_GameObject: {fileID: 2182307124411986111}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -72,45 +72,49 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 5bdb85bf6c87c0341ade66eb1b6e0fc0, type: 3}
+  m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.71, y: 0.34}
+  m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &73569336626442743
+--- !u!114 &245984127547110290
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8562062864449591932}
+  m_GameObject: {fileID: 2182307124411986111}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa70a17b585c0e2468b0e2b2f4b6cf88, type: 3}
+  m_Script: {fileID: 11500000, guid: d2d0e089d0a4f6548847a7ae2b0d6b35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0.1
-  hitboxSize: 2
-  speedBonusMax: 1
-  speedBonusMin: 0.1
-  shieldDamageMod: 3
-  hp: 5
-  boom: {fileID: 2182307124411986111, guid: 33026e9d414bbdd47a03c42e804ac833, type: 3}
---- !u!114 &4345475153063668706
+  animSpeed: 0
+  sprites:
+  - {fileID: 5212484251955148831, guid: 43498cc73080fff43ae4503d398ffc69, type: 3}
+  - {fileID: 4617389635445538659, guid: 43498cc73080fff43ae4503d398ffc69, type: 3}
+  - {fileID: 1092036397482716556, guid: 43498cc73080fff43ae4503d398ffc69, type: 3}
+  - {fileID: -7348456839167385089, guid: 43498cc73080fff43ae4503d398ffc69, type: 3}
+  currentFrame: 0
+  lastFrame: 0
+  firstFrame: 0
+  pause: 0
+  playForward: 1
+--- !u!114 &7003642528999724084
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8562062864449591932}
+  m_GameObject: {fileID: 2182307124411986111}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c1429f854a23fca438d4d39ee0d0ee16, type: 3}
+  m_Script: {fileID: 11500000, guid: 0a7c5e91506fc194dbf4b6ddc2abe6e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

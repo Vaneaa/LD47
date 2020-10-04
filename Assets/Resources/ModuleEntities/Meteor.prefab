@@ -101,6 +101,7 @@ MonoBehaviour:
   speedBonusMin: 0.1
   shieldDamageMod: 3
   hp: 20
+  boom: {fileID: 2182307124411986111, guid: 33026e9d414bbdd47a03c42e804ac833, type: 3}
 --- !u!114 &4345475153063668706
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -28,6 +28,6 @@ public class ModuleData : MonoBehaviour
             Destroy(this.gameObject);
         }
 
-        this.transform.position += new Vector3(-(speedMod + (plr.HorizontalMovment().x / 100)), 0, 0);
+        this.transform.position += new Vector3(-(speedMod + (plr.HorizontalMovment().x / 1000)), 0, 0);
     }
 }
