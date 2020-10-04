@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 7811600899390503905}
   - component: {fileID: 1281469307599095766}
-  - component: {fileID: 3664337455123551070}
   - component: {fileID: 6692024694688794842}
   m_Layer: 0
   m_Name: FuelPowerup
@@ -83,24 +82,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &3664337455123551070
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5593608786618130861}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa70a17b585c0e2468b0e2b2f4b6cf88, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 0.2
-  hitboxSize: 0.3
-  speedBonusMax: 1
-  speedBonusMin: 0.1
-  shieldDamageMod: 3
-  hp: 3
 --- !u!114 &6692024694688794842
 MonoBehaviour:
   m_ObjectHideFlags: 0

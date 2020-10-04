@@ -12,6 +12,7 @@ public class AmmoPowerup : Hazard
             plr.GetComponent<Spaceship>().ammo += 1;
             collected = true;
         }
+        Explode();
     }
     void doNothing()
     {
@@ -27,6 +28,7 @@ public class AmmoPowerup : Hazard
         collideShield = pickup;
         collideLazer = doNothing;
         collideCannon = doNothing;
+        canStopProjectiles = false;
     }
 
     // Update is called once per frame

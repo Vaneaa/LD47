@@ -12,6 +12,7 @@ public class FuelPickup : Hazard
             plr.GetComponent<Spaceship>().fuel += 3f;
             collected = true;
         }
+        Explode();
     }
     void doNothing()
     {
@@ -27,6 +28,7 @@ public class FuelPickup : Hazard
         collideShield = pickup;
         collideLazer = doNothing;
         collideCannon = doNothing;
+        canStopProjectiles = false;
     }
 
     // Update is called once per frame

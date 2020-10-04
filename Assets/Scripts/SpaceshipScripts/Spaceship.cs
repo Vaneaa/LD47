@@ -29,6 +29,8 @@ public class Spaceship : MonoBehaviour
     public Lazer lazer;
     GameObject shield;
     GameObject cannon;
+    SpriteAnimator shieldAnimator;
+
     public float shieldEnergyCost = 0.35f;
     public bool shieldActive = false;
     // Start is called before the first frame update
@@ -37,6 +39,7 @@ public class Spaceship : MonoBehaviour
         lazer = Resources.LoadAll<Lazer>("Lazer")[0];
         shield = GameObject.Find("Shield");
         cannon = Resources.LoadAll<GameObject>("Cannon")[0];
+        shieldAnimator = shield.GetComponent<SpriteAnimator>();
         //lazer = GameObject.Find("Lazer").GetComponent<Lazer>();
 
     }
@@ -55,8 +58,11 @@ public class Spaceship : MonoBehaviour
 
     void setShieldStatus(bool active)
     {
-        shield.GetComponent<SpriteRenderer>().enabled = active;
+        shieldAnimator.pause = false;
+        shieldAnimator.playForward = true;
         shieldActive = active;
+        shield.GetComponent<SpriteRenderer>().enabled = active;
+        shieldAnimator.currentFrame = shieldAnimator.firstFrame;
     }
 
     // Update is called once per frame
@@ -98,6 +104,11 @@ public class Spaceship : MonoBehaviour
         {
             setShieldStatus(false);
         }
+        if(shieldActive == true && shieldAnimator.currentFrame == shieldAnimator.lastFrame) shieldAnimator.pause = true;
+
+
+        
+
 
         // Energy
         solarEfficiency = (leftSolarHP * 0.5f + rightSolarHP * 0.5f)/100f;

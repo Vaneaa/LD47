@@ -12,6 +12,7 @@ public class BatteryPickup : Hazard
             plr.GetComponent<Spaceship>().energy += 20f;
             collected = true;
         }
+        Explode();
     }
     void doNothing()
     {
@@ -27,6 +28,7 @@ public class BatteryPickup : Hazard
         collideShield = pickup;
         collideLazer = doNothing;
         collideCannon = doNothing;
+        canStopProjectiles = false;
     }
 
     // Update is called once per frame

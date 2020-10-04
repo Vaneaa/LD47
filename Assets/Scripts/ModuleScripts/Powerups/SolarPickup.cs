@@ -8,6 +8,7 @@ public class SolarPickup : Hazard
     {
         plr.GetComponent<Spaceship>().leftSolarHP = 100;
         plr.GetComponent<Spaceship>().rightSolarHP = 100;
+        Explode();
     }
     void doNothing()
     {
@@ -23,6 +24,7 @@ public class SolarPickup : Hazard
         collideShield = pickup;
         collideLazer = doNothing;
         collideCannon = doNothing;
+        canStopProjectiles = false;
     }
 
     // Update is called once per frame

@@ -120,7 +120,7 @@ public class Hazard : MonoBehaviour
         transform.position = new Vector2(transform.position.x - (speed + speedBonus + plr.GetComponent<Spaceship>().HorizontalMovment().x) * Time.deltaTime, transform.position.y);
     }
    
-    void Explode()
+    protected void Explode()
     {
         Destroy(this.gameObject);
     }

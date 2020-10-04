@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6570341817156096414}
   - component: {fileID: 2705604296515737158}
+  - component: {fileID: 8250224937674008651}
   m_Layer: 0
   m_Name: Shield
   m_TagString: Untagged
@@ -82,6 +83,29 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &8250224937674008651
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1040170646598525990}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2d0e089d0a4f6548847a7ae2b0d6b35, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animSpeed: 12
+  sprites:
+  - {fileID: 1069927392029984398, guid: 3e2623236d4b3734e8d3d421e290b588, type: 3}
+  - {fileID: -2221388434089157140, guid: 3e2623236d4b3734e8d3d421e290b588, type: 3}
+  - {fileID: -3921404715513499438, guid: 3e2623236d4b3734e8d3d421e290b588, type: 3}
+  - {fileID: 4901845960246840564, guid: 3e2623236d4b3734e8d3d421e290b588, type: 3}
+  currentFrame: 1
+  lastFrame: 0
+  firstFrame: 0
+  pause: 0
+  playForward: 0
 --- !u!1 &1747658936526857871
 GameObject:
   m_ObjectHideFlags: 0
@@ -154,14 +178,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b2c9a60d76432e4aaf6f150e1f57572, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cannonReady: 1
   spaceshipHorizontalSpeed: 0
   fuel: 100
   energy: 100
   HP: 100
   solarEfficiency: 0
+  ammo: 2
   leftSolarHP: 100
   rightSolarHP: 100
   lazer: {fileID: 0}
+  shieldEnergyCost: 0.35
+  shieldActive: 0
 --- !u!1 &1747658937970854284
 GameObject:
   m_ObjectHideFlags: 0
