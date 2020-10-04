@@ -67,7 +67,7 @@ public class Spaceship : MonoBehaviour
         // core HP
         if(HP > 100)
         {
-            HP = 100
+            HP = 100;
         }
         else if (HP <= 0)
         {
