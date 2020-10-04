@@ -21,8 +21,6 @@ public class Spaceship : MonoBehaviour
     public float leftSolarHP = 100f;
     public float rightSolarHP = 100f;
 
-    public bool isAlive = true;
-
     public Lazer lazer;
 
     // Start is called before the first frame update
@@ -106,7 +104,7 @@ public class Spaceship : MonoBehaviour
             }
             
         }
-        print(energy);
+        //print(energy);
 
         // ship movement for testing
         //transform.position += HorizontalMovment();
