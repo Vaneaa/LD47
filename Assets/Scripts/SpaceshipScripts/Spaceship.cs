@@ -104,7 +104,7 @@ public class Spaceship : MonoBehaviour
             }
             
         }
-        print(energy);
+        //print(energy);
 
         // ship movement for testing
         //transform.position += HorizontalMovment();
