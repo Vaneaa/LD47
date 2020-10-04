@@ -9,8 +9,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5433689705046579304}
-  - component: {fileID: 827674312106442387}
   - component: {fileID: 2593238283776130512}
+  - component: {fileID: 3523305635914076449}
   m_Layer: 0
   m_Name: Lazer
   m_TagString: Lazer
@@ -27,12 +27,24 @@ Transform:
   m_GameObject: {fileID: 5250255386354374333}
   m_LocalRotation: {x: -0.00993714, y: -0.0011111225, z: -0.7053072, w: 0.7088313}
   m_LocalPosition: {x: 0.3873, y: -0.026, z: -0.0001}
-  m_LocalScale: {x: 1.1649, y: 10.303856, z: 1.1649}
+  m_LocalScale: {x: 1.1649, y: 4.30386, z: 1.1649}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: -0.897, y: 0.71300006, z: -89.72}
---- !u!212 &827674312106442387
+--- !u!114 &2593238283776130512
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5250255386354374333}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b74e6e234ceabe42a631a60c077047c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!212 &3523305635914076449
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -71,26 +83,14 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: d707c060667851c47ac716705c54f23f, type: 3}
-  m_Color: {r: 0.93725497, g: 0.24705884, b: 0.09019608, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 482a7ad1b5e0677488c6a98820d6fabd, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.07, y: 0.23}
+  m_Size: {x: 0.68, y: 0.03}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &2593238283776130512
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5250255386354374333}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0b74e6e234ceabe42a631a60c077047c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

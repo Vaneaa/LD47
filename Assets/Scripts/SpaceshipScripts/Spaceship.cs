@@ -14,6 +14,14 @@ public class Spaceship : MonoBehaviour
     float speedModifier = 0.005f;
 
     public float fuel = 100f;
+    public float energy = 100f;
+    public float HP = 100f;
+    public float solarEfficiency;
+
+    public float leftSolarHP = 100f;
+    public float rightSolarHP = 100f;
+
+    public bool isAlive = true;
 
     public Lazer lazer;
 
@@ -29,8 +37,13 @@ public class Spaceship : MonoBehaviour
     {
         if (Input.GetKey("space") || Input.GetKey("z"))
         {
-            print("Space was pressed");
-            ShootLazer();
+            if (energy > 0.09f)
+            {
+                energy -= 0.1f;
+                print(energy);
+                    ShootLazer();
+            }
+            
         }
     }
 
@@ -40,7 +53,28 @@ public class Spaceship : MonoBehaviour
         Vector3 horizontalMove = new Vector3(Input.GetAxis("Horizontal"), 0, 0);
         Vector3 verticalMove = new Vector3(0, Input.GetAxis("Vertical"), 0);
 
-        // lazer
+        // Energy
+        solarEfficiency = (leftSolarHP * 0.5f + rightSolarHP * 0.5f)/100f;
+        if( energy < 100f)
+        {
+            energy += solarEfficiency * 0.01f;
+        }
+        else
+        {
+            energy = 100;
+        }
+
+        // core HP
+        if(HP > 100)
+        {
+            HP = 100
+        }
+        else if (HP <= 0)
+        {
+            energy = 0;
+            fuel = 0;
+
+        }
         
         // Thrusting
         if (fuel > 0.005f)
@@ -70,9 +104,9 @@ public class Spaceship : MonoBehaviour
                     spaceshipVerticalSpeed = spaceshipVerticalSpeed - speedModifier * 1.5f;
                 }
             }
-            ;
+            
         }
-        //print(fuel);
+        print(energy);
 
         // ship movement for testing
         //transform.position += HorizontalMovment();
