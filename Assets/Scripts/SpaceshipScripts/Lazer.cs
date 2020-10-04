@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class Lazer : MonoBehaviour
 {
+    public GameObject explosion;
     FrameTimer garbageCollector = new FrameTimer(700);
     // Start is called before the first frame update
     void Start()

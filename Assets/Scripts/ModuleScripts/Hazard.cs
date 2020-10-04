@@ -12,6 +12,7 @@ public class Hazard : MonoBehaviour
     public float shieldDamageMod = 0f;
     float speedBonus;
     public int hp = 1;
+    int hpMax;
     protected GameObject plr;
     public delegate void onCollide();
     protected onCollide collideBase;
@@ -21,6 +22,8 @@ public class Hazard : MonoBehaviour
     protected onCollide collideCannon;
     protected onCollide collideShield;
 
+    public GameObject boom;
+
     protected bool canStopProjectiles = true;
 
     void defaultCollideBase()
@@ -28,21 +31,21 @@ public class Hazard : MonoBehaviour
         if (plr.GetComponent<Spaceship>().shieldActive == false) plr.GetComponent<Spaceship>().HP -= 15;
         else plr.GetComponent<Spaceship>().energy -= hp + shieldDamageMod;
 
-        Destroy(this.gameObject);
+        Explode();
     }
     void defaultCollideSAL()
     {
         //solar array L collision
         if (plr.GetComponent<Spaceship>().shieldActive == false)  plr.GetComponent<Spaceship>().leftSolarHP -= 15;
         else plr.GetComponent<Spaceship>().energy -= hp + shieldDamageMod;
-        Destroy(this.gameObject);
+        Explode();
     }
     void defaultCollideSAR()
     {
         //solar array R collision
         if (plr.GetComponent<Spaceship>().shieldActive == false) plr.GetComponent<Spaceship>().rightSolarHP -= 15;
         else plr.GetComponent<Spaceship>().energy -= hp + shieldDamageMod;
-        Destroy(this.gameObject);
+        Explode();
     }
     void defaultLazerCollide()
     {
@@ -57,10 +60,17 @@ public class Hazard : MonoBehaviour
         Destroy(this.gameObject);
     }
 
+    void projDeath(GameObject projectileToKill)
+    {
+        Instantiate(projectileToKill.GetComponent<Lazer>().explosion, projectileToKill.transform.position, Quaternion.identity);
+        Destroy(projectileToKill);
+    }
+
 
 
     protected void init() //place inside Start() to facilitate easy children
     {
+        hpMax = hp;
         collideBase = new onCollide(defaultCollideBase);
         collideSAL = new onCollide(defaultCollideSAL);
         collideSAR = new onCollide(defaultCollideSAR);
@@ -79,7 +89,7 @@ public class Hazard : MonoBehaviour
         {
             if(Vector2.Distance(this.transform.position, proj.transform.position) < 0.7f)
             {
-                if (canStopProjectiles) Destroy(proj);
+                if (canStopProjectiles) projDeath(proj);
                 collideLazer();
             }
         }
@@ -88,7 +98,7 @@ public class Hazard : MonoBehaviour
         {
             if (Vector2.Distance(this.transform.position, proj.transform.position) < 1f)
             {
-                if (canStopProjectiles) Destroy(proj);
+                if (canStopProjectiles) projDeath(proj);
                 collideCannon();
             }
         }
@@ -122,7 +132,14 @@ public class Hazard : MonoBehaviour
    
     protected void Explode()
     {
+        if (boom != null)
+        {
+            
+            GameObject obj = Instantiate(boom, transform.position, Quaternion.identity);
+            obj.transform.localScale = new Vector3(transform.localScale.x * hpMax * 3, transform.localScale.y * hpMax * 3, transform.localScale.z);
+        }
         Destroy(this.gameObject);
+
     }
 
     void Start()
