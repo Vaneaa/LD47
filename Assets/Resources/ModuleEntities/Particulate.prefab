@@ -108,7 +108,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0.1
-  hitboxSize: 1.5
+  hitboxSize: 3
   speedBonusMax: 1
   speedBonusMin: 0.1
+  shieldDamageMod: -1
   hp: 1

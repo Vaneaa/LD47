@@ -16,6 +16,7 @@ public class HazardRandomizer : MonoBehaviour
     public Sprite[] medMeteors;
     public Sprite[] smlMeteors;
     public Sprite[] clouds;
+    public Sprite[] bigMeteors;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,6 +24,7 @@ public class HazardRandomizer : MonoBehaviour
         medMeteors = Resources.LoadAll<Sprite>("PixelArt/Med_Meteors");
         smlMeteors = Resources.LoadAll<Sprite>("PixelArt/Sml_Meteor");
         clouds = Resources.LoadAll<Sprite>("PixelArt/Particulate_Clouds");
+        bigMeteors = Resources.LoadAll<Sprite>("PixelArt/Big_Meteors");
     }
 
     public Sprite getRandomSatellite()
@@ -44,4 +46,10 @@ public class HazardRandomizer : MonoBehaviour
     {
         return clouds[Random.Range(0, clouds.Length)];
     }
+
+    public Sprite getRandomBigMeteor()
+    {
+        return bigMeteors[Random.Range(0, bigMeteors.Length)];
+    }
+
 }

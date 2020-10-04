@@ -96,10 +96,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0.1
-  hitboxSize: 0.5
+  hitboxSize: 0.8
   speedBonusMax: 1
   speedBonusMin: 0.1
-  hp: 1
+  shieldDamageMod: 3
+  hp: 20
 --- !u!114 &4345475153063668706
 MonoBehaviour:
   m_ObjectHideFlags: 0

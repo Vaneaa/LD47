@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class Lazer : MonoBehaviour
 {
+    FrameTimer garbageCollector = new FrameTimer(700);
     // Start is called before the first frame update
     void Start()
     {
@@ -15,7 +16,11 @@ public class Lazer : MonoBehaviour
     void Update()
     {
         ///transform.eulerAngles += new Vector3(0, 0, 1);
-        transform.position += (new Vector3(1, 0, 0)) * 0.1f;
+        transform.position += (new Vector3(1, 0, 0)) * 10 * Time.deltaTime;
+        if(garbageCollector.go())
+        {
+            Destroy(this.gameObject);
+        }
     }
 }
  

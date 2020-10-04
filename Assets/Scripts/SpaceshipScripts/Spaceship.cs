@@ -7,8 +7,12 @@ using UnityEngine;
 
 public class Spaceship : MonoBehaviour
 {
+    FrameTimer lazerShotDelay = new FrameTimer(10);
+    FrameTimer shieldEnergyDrain = new FrameTimer(10);
+    FrameTimer cannonShotDelay = new FrameTimer(60);
+    public bool cannonReady = true;
 
-    public float spaceshipHorizontalSpeed = 0;
+    public float spaceshipHorizontalSpeed = 3.0f;
     public static float spaceshipVerticalSpeed = 0;
     public const float MAX_SPEED = 12;
     float speedModifier = 0.005f;
@@ -17,32 +21,42 @@ public class Spaceship : MonoBehaviour
     public float energy = 100f;
     public float HP = 100f;
     public float solarEfficiency;
+    public int ammo = 2;
 
     public float leftSolarHP = 100f;
     public float rightSolarHP = 100f;
 
     public Lazer lazer;
-
+    GameObject shield;
+    GameObject cannon;
+    public float shieldEnergyCost = 0.35f;
+    public bool shieldActive = false;
     // Start is called before the first frame update
     void Start()
     {
         lazer = Resources.LoadAll<Lazer>("Lazer")[0];
+        shield = GameObject.Find("Shield");
+        cannon = Resources.LoadAll<GameObject>("Cannon")[0];
         //lazer = GameObject.Find("Lazer").GetComponent<Lazer>();
 
     }
 
     void   FixedUpdate()
     {
-        if (Input.GetKey("space") || Input.GetKey("z"))
+        //shield energy drain
+        if (shieldActive == true && energy > shieldEnergyCost)
         {
-            if (energy > 0.09f)
-            {
-                energy -= 0.1f;
-                print(energy);
-                    ShootLazer();
-            }
-            
+            if (shieldEnergyDrain.go()) energy -= shieldEnergyCost;
         }
+        else setShieldStatus(false);
+        
+        
+    }
+
+    void setShieldStatus(bool active)
+    {
+        shield.GetComponent<SpriteRenderer>().enabled = active;
+        shieldActive = active;
     }
 
     // Update is called once per frame
@@ -50,6 +64,40 @@ public class Spaceship : MonoBehaviour
     {
         Vector3 horizontalMove = new Vector3(Input.GetAxis("Horizontal"), 0, 0);
         Vector3 verticalMove = new Vector3(0, Input.GetAxis("Vertical"), 0);
+
+        //solar arrays can't fall under 0hp
+        if (leftSolarHP <= 0) leftSolarHP = 0;
+        if (rightSolarHP <= 0) rightSolarHP = 0;
+
+        //get lazer input
+        if (lazerShotDelay.go() && Input.GetButton("Lazer"))
+        {
+            if (energy >= 0.25f)
+            {
+                energy -= 0.25f;
+                ShootLazer();
+            }
+
+        }
+        //get cannon input
+        if (cannonReady == false && cannonShotDelay.go()) cannonReady = true;
+        if (cannonReady == true && ammo > 0 && Input.GetButton("Cannon"))
+        {
+            FireCannon();
+            cannonReady = false;
+            ammo -= 1;
+            horizontalMove = new Vector3(horizontalMove.x - 0.5f, horizontalMove.y, horizontalMove.z);
+        }
+
+        //check shield toggle status every frame for responsiveness
+        if (Input.GetButtonDown("Shield") && shieldActive == false)
+        {
+            setShieldStatus(true);
+        }
+        else if (Input.GetButtonDown("Shield") && shieldActive == true)
+        {
+            setShieldStatus(false);
+        }
 
         // Energy
         solarEfficiency = (leftSolarHP * 0.5f + rightSolarHP * 0.5f)/100f;
@@ -62,6 +110,11 @@ public class Spaceship : MonoBehaviour
             energy = 100;
         }
 
+        if (energy < 0)
+        {
+            setShieldStatus(false);
+            energy = 0;
+        }
         // core HP
         if(HP > 100)
         {
@@ -69,8 +122,8 @@ public class Spaceship : MonoBehaviour
         }
         else if (HP <= 0)
         {
-            energy = 0;
-            fuel = 0;
+            //energy = 0;
+            //fuel = 0;
 
         }
         
@@ -95,11 +148,11 @@ public class Spaceship : MonoBehaviour
                 fuel = fuel - 0.00117f;
                 if (verticalMove.y > 0)
                 {
-                    spaceshipVerticalSpeed = spaceshipVerticalSpeed + speedModifier * 1.5f ;
+                    spaceshipVerticalSpeed = spaceshipVerticalSpeed + speedModifier * 4f ;
                 }
                 else
                 {
-                    spaceshipVerticalSpeed = spaceshipVerticalSpeed - speedModifier * 1.5f;
+                    spaceshipVerticalSpeed = spaceshipVerticalSpeed - speedModifier * 4f;
                 }
             }
             
@@ -159,5 +212,10 @@ public class Spaceship : MonoBehaviour
     {
         print(lazer);
         Instantiate(lazer, new Vector3(transform.position.x, transform.position.y, 0), transform.rotation);
+    }
+
+    void FireCannon()
+    {
+        Instantiate(cannon, new Vector3(transform.position.x, transform.position.y, 0), transform.rotation);
     }
 }

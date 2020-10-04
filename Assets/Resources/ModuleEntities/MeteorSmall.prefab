@@ -99,6 +99,7 @@ MonoBehaviour:
   hitboxSize: 0.3
   speedBonusMax: 1
   speedBonusMin: 0.1
+  shieldDamageMod: 3
   hp: 1
 --- !u!114 &4597515850682773739
 MonoBehaviour:
