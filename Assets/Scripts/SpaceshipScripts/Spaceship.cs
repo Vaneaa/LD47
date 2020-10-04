@@ -58,7 +58,7 @@ public class Spaceship : MonoBehaviour
         //shield energy drain
         if (shieldActive == true && energy > shieldEnergyCost)
         {
-            if (shieldEnergyDrain.go()) energy -= shieldEnergyCost;
+            if (shieldEnergyDrain.go()) energy -= 0;
         }
         else setShieldStatus(false);
         
@@ -116,7 +116,7 @@ public class Spaceship : MonoBehaviour
         {
             if (energy >= 0.25f)
             {
-                energy -= 0.25f;
+                energy -= 0.15f;
                 ShootLazer();
             }
 
@@ -135,7 +135,7 @@ public class Spaceship : MonoBehaviour
         }
 
         //check shield toggle status every frame for responsiveness
-        if (Input.GetButtonDown("Shield") && shieldActive == false)
+        if (Input.GetButtonDown("Shield") && shieldActive == false && energy >= 10f)
         {
             setShieldStatus(true);
         }
@@ -153,7 +153,7 @@ public class Spaceship : MonoBehaviour
         solarEfficiency = (leftSolarHP * 0.5f + rightSolarHP * 0.5f)/100f;
         if( energy < 100f)
         {
-            energy += solarEfficiency * 0.05f;
+            if(shieldActive == false) energy += solarEfficiency * 0.05f;
         }
         else
         {
