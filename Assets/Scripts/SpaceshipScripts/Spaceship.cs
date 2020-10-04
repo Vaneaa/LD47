@@ -189,11 +189,17 @@ public class Spaceship : MonoBehaviour
                 fuel = fuel - 0.00117f;
                 if (verticalMove.y > 0)
                 {
-                    spaceshipVerticalSpeed = spaceshipVerticalSpeed + speedModifier * 4f ;
+                    if(spaceshipVerticalSpeed >= 0)
+                        spaceshipVerticalSpeed = spaceshipVerticalSpeed + speedModifier * 10f ;
+                    else
+                        spaceshipVerticalSpeed = spaceshipVerticalSpeed/1.01f + speedModifier * 10f ;
                 }
                 else
                 {
-                    spaceshipVerticalSpeed = spaceshipVerticalSpeed - speedModifier * 4f;
+                    if (spaceshipVerticalSpeed <= 0)
+                        spaceshipVerticalSpeed = spaceshipVerticalSpeed - speedModifier * 10f;
+                    else
+                        spaceshipVerticalSpeed = spaceshipVerticalSpeed/1.01f - speedModifier * 10f;
                 }
             }
             
