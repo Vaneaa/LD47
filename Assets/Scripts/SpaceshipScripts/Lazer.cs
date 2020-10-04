@@ -31,7 +31,7 @@ public class Lazer : MonoBehaviour
             GameObject[] hazList = GameObject.FindGameObjectsWithTag("Hazard");
             foreach(GameObject hazard in hazList)
             {
-                if(Vector2.Distance(hazard.transform.position, this.transform.position) < 4f)
+                if(Vector2.Distance(hazard.transform.position, this.transform.position) < 4f && hazard.GetComponent<Hazard>().canStopProjectiles == true)
                 {
                     hazard.GetComponent<Hazard>().Explode();
                 }              

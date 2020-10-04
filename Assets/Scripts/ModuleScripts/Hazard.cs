@@ -24,7 +24,7 @@ public class Hazard : MonoBehaviour
 
     public GameObject boom;
 
-    protected bool canStopProjectiles = true;
+    public bool canStopProjectiles = true;
 
     void defaultCollideBase()
     {
