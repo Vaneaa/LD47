@@ -6,6 +6,7 @@ public class VelocoraptorMeter : MonoBehaviour
 {
     UnityEngine.UI.Text display;
     UnityEngine.UI.Text fuelDisplay;
+    UnityEngine.UI.Text energyDisplay;
     Spaceship plr;
 
 
@@ -14,6 +15,7 @@ public class VelocoraptorMeter : MonoBehaviour
         plr = GameObject.Find("Spaceship").GetComponent<Spaceship>();
         display = GetComponent<UnityEngine.UI.Text>();
         fuelDisplay = GameObject.Find("Fuel").GetComponent<UnityEngine.UI.Text>();
+        energyDisplay = GameObject.Find("Energy").GetComponent<UnityEngine.UI.Text>();
     }
 
     // Update is called once per frame
@@ -21,5 +23,6 @@ public class VelocoraptorMeter : MonoBehaviour
     {
         display.text = plr.spaceshipHorizontalSpeed.ToString();
         fuelDisplay.text = plr.fuel.ToString();
+        energyDisplay.text = plr.energy.ToString();
     }
 }
