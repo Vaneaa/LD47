@@ -14,7 +14,7 @@ public class Spaceship : MonoBehaviour
 
     public float spaceshipHorizontalSpeed = 3.0f;
     public static float spaceshipVerticalSpeed = 0;
-    public const float MAX_SPEED = 12;
+    public float MAX_SPEED = 12;
     float speedModifier = 0.005f;
 
     public float fuel = 100f;
@@ -129,6 +129,9 @@ public class Spaceship : MonoBehaviour
             cannonReady = false;
             ammo -= 1;
             horizontalMove = new Vector3(horizontalMove.x - 0.5f, horizontalMove.y, horizontalMove.z);
+        }
+        if (ammo > 3){
+            ammo = 3;
         }
 
         //check shield toggle status every frame for responsiveness
