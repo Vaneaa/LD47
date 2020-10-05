@@ -45,6 +45,7 @@ public class Spaceship : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        spaceshipHorizontalSpeed = 1;
         fail = false;
         danger = false;
         lazer = Resources.LoadAll<Lazer>("Lazer")[0];
@@ -270,12 +271,14 @@ public class Spaceship : MonoBehaviour
         }
 
         // danger sate
-        if(HP < 20 || spaceshipHorizontalSpeed < 10 || spaceshipHorizontalSpeed < 0.8)
+        if(HP < 20 || spaceshipHorizontalSpeed > 10 || spaceshipHorizontalSpeed < 0.8f)
         {
             danger = true;
+        }else{
+            danger = false;
         }
         // fail state
-        if(HP == 0 || spaceshipHorizontalSpeed > 11 || spaceshipHorizontalSpeed < 0.2)
+        if(HP == 0 || spaceshipHorizontalSpeed > 11 || spaceshipHorizontalSpeed < 0.2f)
         {
             fail = true;
         }
