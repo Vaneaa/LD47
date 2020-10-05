@@ -1,7 +1,229 @@
 fileFormatVersion: 2
 guid: a60d7254f3bc5e841b8200417a8a5a76
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -7894058853043579833
+    second: Warning_sheet_0
+  - first:
+      213: -4560366852166223789
+    second: Warning_sheet_1
+  - first:
+      213: -7256396934862965750
+    second: Warning_sheet_2
+  - first:
+      213: 8226947479178105109
+    second: Warning_sheet_3
+  - first:
+      213: -3688935130870449225
+    second: Warning_sheet_4
+  - first:
+      213: 5938245013619124949
+    second: Warning_sheet_5
+  - first:
+      213: 6731848682257973172
+    second: Warning_sheet_6
+  - first:
+      213: 4398009990821203059
+    second: Warning_sheet_7
+  - first:
+      213: 7517894118665807192
+    second: Warning_sheet_8
+  - first:
+      213: 8300803465137432700
+    second: Warning_sheet_9
+  - first:
+      213: 1762331716550340940
+    second: Warning_sheet_10
+  - first:
+      213: 2901109895085927444
+    second: Warning_sheet_11
+  - first:
+      213: -3990730887387573297
+    second: Warning_sheet_12
+  - first:
+      213: -5635303920471124500
+    second: Warning_sheet_13
+  - first:
+      213: -8218046944242415539
+    second: Warning_sheet_14
+  - first:
+      213: -6016663485179025965
+    second: Warning_sheet_15
+  - first:
+      213: -8077657499407323573
+    second: Warning_sheet_16
+  - first:
+      213: -1264143773800542284
+    second: Warning_sheet_17
+  - first:
+      213: -8515437293151465676
+    second: Warning_sheet_18
+  - first:
+      213: -7090742802675776996
+    second: Warning_sheet_19
+  - first:
+      213: -8597871026221022995
+    second: Warning_sheet_20
+  - first:
+      213: -6878846737968680855
+    second: Warning_sheet_21
+  - first:
+      213: -4558991914520729782
+    second: Warning_sheet_22
+  - first:
+      213: 6349641921560964728
+    second: Warning_sheet_23
+  - first:
+      213: 6465109112878390481
+    second: Warning_sheet_24
+  - first:
+      213: 6222269254465199295
+    second: Warning_sheet_25
+  - first:
+      213: -530542373657712618
+    second: Warning_sheet_26
+  - first:
+      213: 2904362406722220452
+    second: Warning_sheet_27
+  - first:
+      213: 6598096988925891911
+    second: Warning_sheet_28
+  - first:
+      213: 5304613830172807587
+    second: Warning_sheet_29
+  - first:
+      213: -7125204133388180348
+    second: Warning_sheet_30
+  - first:
+      213: 6247644820550396482
+    second: Warning_sheet_31
+  - first:
+      213: -67522077095397255
+    second: Warning_sheet_32
+  - first:
+      213: -3309333160125551617
+    second: Warning_sheet_33
+  - first:
+      213: -4088741645903859670
+    second: Warning_sheet_34
+  - first:
+      213: 237357106902233726
+    second: Warning_sheet_35
+  - first:
+      213: 4390834039579712910
+    second: Warning_sheet_36
+  - first:
+      213: 5370555218395059127
+    second: Warning_sheet_37
+  - first:
+      213: 5992127313716369891
+    second: Warning_sheet_38
+  - first:
+      213: -5905595576624269877
+    second: Warning_sheet_39
+  - first:
+      213: 6943899209389468681
+    second: Warning_sheet_40
+  - first:
+      213: -2379915416548191725
+    second: Warning_sheet_41
+  - first:
+      213: 451127431217802526
+    second: Warning_sheet_42
+  - first:
+      213: 9005633159279845665
+    second: Warning_sheet_43
+  - first:
+      213: -3984371719048339651
+    second: Warning_sheet_44
+  - first:
+      213: -7388740263203148297
+    second: Warning_sheet_45
+  - first:
+      213: -5147945365599170600
+    second: Warning_sheet_46
+  - first:
+      213: 5930601862799828714
+    second: Warning_sheet_47
+  - first:
+      213: 8375430580988565545
+    second: Warning_sheet_48
+  - first:
+      213: 5589223011913579018
+    second: Warning_sheet_49
+  - first:
+      213: 5149184606283636491
+    second: Warning_sheet_50
+  - first:
+      213: -3746005375695974255
+    second: Warning_sheet_51
+  - first:
+      213: 3803562157607921720
+    second: Warning_sheet_52
+  - first:
+      213: 3462618136797354746
+    second: Warning_sheet_53
+  - first:
+      213: 3732972311108271867
+    second: Warning_sheet_54
+  - first:
+      213: -7057935896078551298
+    second: Warning_sheet_55
+  - first:
+      213: 6155869811344360062
+    second: Warning_sheet_56
+  - first:
+      213: -3234881798807218953
+    second: Warning_sheet_57
+  - first:
+      213: 8446552699472643262
+    second: Warning_sheet_58
+  - first:
+      213: 767013787805471388
+    second: Warning_sheet_59
+  - first:
+      213: 6940564409961552123
+    second: Warning_sheet_60
+  - first:
+      213: -5421701197583393779
+    second: Warning_sheet_61
+  - first:
+      213: 7049948523683542324
+    second: Warning_sheet_62
+  - first:
+      213: -7572410794468972207
+    second: Warning_sheet_63
+  - first:
+      213: 5959655145910946408
+    second: Warning_sheet_64
+  - first:
+      213: 9175381711556835104
+    second: Warning_sheet_65
+  - first:
+      213: 3105005316631753831
+    second: Warning_sheet_66
+  - first:
+      213: 7355919915942341286
+    second: Warning_sheet_67
+  - first:
+      213: -3254055777088142971
+    second: Warning_sheet_68
+  - first:
+      213: -5641854884421825354
+    second: Warning_sheet_69
+  - first:
+      213: -3197028907670072479
+    second: Warning_sheet_70
+  - first:
+      213: 4329469361199422104
+    second: Warning_sheet_71
+  - first:
+      213: -3598079332246713910
+    second: Warning_sheet_72
+  - first:
+      213: 14608623082588791
+    second: Warning_sheet_73
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -40,7 +262,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -97,7 +319,133 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Warning_sheet_0
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 89
+        width: 199
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7445f443c4ba27290800000000000000
+      internalID: -7894058853043579833
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warning_sheet_1
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 71
+        width: 93
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3587a23828256b0c0800000000000000
+      internalID: -4560366852166223789
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warning_sheet_2
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 53
+        width: 124
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a04724c0f691c4b90800000000000000
+      internalID: -7256396934862965750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warning_sheet_3
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 35
+        width: 179
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 511d432e42dfb2270800000000000000
+      internalID: 8226947479178105109
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warning_sheet_4
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 17
+        width: 180
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7bbf1051b054eccc0800000000000000
+      internalID: -3688935130870449225
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warning_sheet_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 234
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5daa002b062e86250800000000000000
+      internalID: 5938245013619124949
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []

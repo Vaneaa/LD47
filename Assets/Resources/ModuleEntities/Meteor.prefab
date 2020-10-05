@@ -100,8 +100,9 @@ MonoBehaviour:
   speedBonusMax: 1
   speedBonusMin: 0.1
   shieldDamageMod: 50
-  hp: 20
+  hp: 8
   boom: {fileID: 2182307124411986111, guid: 33026e9d414bbdd47a03c42e804ac833, type: 3}
+  canStopProjectiles: 1
 --- !u!114 &4345475153063668706
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -21,6 +21,7 @@ public class Hazard : MonoBehaviour
     protected onCollide collideLazer;
     protected onCollide collideCannon;
     protected onCollide collideShield;
+    FrameTimer timeout = new FrameTimer(1300);
 
     public GameObject boom;
 
@@ -90,6 +91,10 @@ public class Hazard : MonoBehaviour
     }
     protected void run() //place inside Start() to facilitate easy children
     {
+        if(timeout.go())
+        {
+            Explode();
+        }
         //weapon collisions
         GameObject[] lazerList = GameObject.FindGameObjectsWithTag("Lazer");
         GameObject[] cannonList = GameObject.FindGameObjectsWithTag("Cannon");

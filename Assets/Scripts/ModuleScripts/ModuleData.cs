@@ -23,7 +23,7 @@ public class ModuleData : MonoBehaviour
             //moduleDirector.selectNextModule();
             dead = true;
         }
-        if(this.transform.position.x < -25)
+        if(this.transform.position.x < -17)
         {
             Destroy(this.gameObject);
         }

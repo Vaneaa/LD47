@@ -15,6 +15,9 @@ public class ModuleDirector : MonoBehaviour
     bool choosingPath = false;
     public List<GameObject> selectedModuleType = new List<GameObject>();
     PathUI pathui;
+
+    public int modulesCompleted = 0;
+    public bool victory = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -94,6 +97,8 @@ public class ModuleDirector : MonoBehaviour
             int next = getStationCourse();
             print("plr.spaceshipHorizontalSpeed/4 : " + next.ToString());
             setModuleType(incomingModules[next].GetComponent<ModuleData>().type);
+            modulesCompleted += 1;
+            if (modulesCompleted >= 10) victory = true;
             choosingPath = false;
         }
     }

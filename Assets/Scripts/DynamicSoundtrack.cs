@@ -6,6 +6,8 @@ public class DynamicSoundtrack : MonoBehaviour
 {
 
     FrameTimer volumeFade = new FrameTimer(5);
+    UnityEngine.UI.Slider volumeSlider;
+    float volPercent = 0.5f;
 
     AudioSource arp;
     AudioSource athmo;
@@ -21,7 +23,8 @@ public class DynamicSoundtrack : MonoBehaviour
     void Start()
     {
         plr = GameObject.Find("Spaceship").GetComponent<Spaceship>();
-
+        volumeSlider = GameObject.Find("Slider").GetComponent<UnityEngine.UI.Slider>();
+        volumeSlider.value = volPercent;
         arp = transform.GetChild(0).GetComponent<AudioSource>();
         athmo = transform.GetChild(1).GetComponent<AudioSource>();
         hihat = transform.GetChild(2).GetComponent<AudioSource>();
@@ -37,6 +40,17 @@ public class DynamicSoundtrack : MonoBehaviour
     {
             if (track.volume > 0) track.volume -= fadeStr;
             else track.volume = 0;
+    }
+
+    void adjustVolume()
+    {
+        volPercent = volumeSlider.value;
+        if (melody.volume > 0) melody.volume /= volPercent;
+        if (pulsebass.volume > 0) pulsebass.volume /= volPercent;
+        if (arp.volume > 0) arp.volume /= volPercent;
+        if (snare.volume > 0) snare.volume /= volPercent;
+        if (hihat.volume > 0) hihat.volume /= volPercent;
+        if (athmo.volume > 0) athmo.volume /= volPercent;
     }
 
     void Update()
