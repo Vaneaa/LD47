@@ -39,9 +39,14 @@ public class Spaceship : MonoBehaviour
 
     public SpriteRenderer leftSolarDamaged;
     public SpriteRenderer rightSolarDamaged;
+
+    public bool fail = false;
+    public bool danger = false;
     // Start is called before the first frame update
     void Start()
     {
+        fail = false;
+        danger = false;
         lazer = Resources.LoadAll<Lazer>("Lazer")[0];
         shield = GameObject.Find("Shield");
         cannon = Resources.LoadAll<GameObject>("Cannon")[0];
@@ -264,6 +269,27 @@ public class Spaceship : MonoBehaviour
             spaceshipVerticalSpeed = spaceshipVerticalSpeed + speedModifier * 0.05f;
         }
 
+        // danger sate
+        if(HP < 20 || spaceshipHorizontalSpeed < 10 || spaceshipHorizontalSpeed < 0.8)
+        {
+            danger = true;
+        }
+        // fail state
+        if(HP == 0 || spaceshipHorizontalSpeed > 11 || spaceshipHorizontalSpeed < 0.2)
+        {
+            fail = true;
+        }
+
+        if (transform.position.y > 6.8){
+            var p = transform.position;
+            p.y = 6.8f;
+            transform.position = p;
+
+        }else if (transform.position.y < -6.8){
+            var p = transform.position;
+            p.y = -6.8f;
+            transform.position = p;
+        }
 
     }
 
