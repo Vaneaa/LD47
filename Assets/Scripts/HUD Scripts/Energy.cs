@@ -10,7 +10,7 @@ public class Energy : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        energy= GameObject.Find("Energy").GetComponent<Slider>();
+        energy= GameObject.Find("Energy Panel").GetComponent<Slider>();
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Spaceship>();
         
     }

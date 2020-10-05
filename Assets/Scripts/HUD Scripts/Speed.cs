@@ -10,7 +10,7 @@ public class Speed : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        speed= GameObject.Find("Speed").GetComponent<Slider>();
+        speed= GameObject.Find("Speed Panel").GetComponent<Slider>();
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Spaceship>();
         
     }

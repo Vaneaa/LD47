@@ -10,7 +10,7 @@ public class HP : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        hp= GameObject.Find("HP").GetComponent<Slider>();
+        hp= GameObject.Find("HP Panel").GetComponent<Slider>();
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Spaceship>();
         
     }
