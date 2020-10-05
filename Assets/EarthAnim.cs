@@ -37,8 +37,8 @@ public class EarthAnim : MonoBehaviour
                     sprites[i].enabled = false;
                 }
                 sprites[counter].enabled = true;
-                print("timer " + timer);
-                print("counter " + counter);
+                //print("timer " + timer);
+                //print("counter " + counter);
                 //print("Time Delta " + Time.deltaTime);
                 counter++;
             }
