@@ -64,7 +64,6 @@ public class DynamicSoundtrack : MonoBehaviour
 
     void Update()
     {
-        if(GameObject)
         adjustVolume();
         if(volumeFade.go())
         {
