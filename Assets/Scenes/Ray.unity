@@ -2235,6 +2235,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 980377106630666552, guid: 277e601fff4071e4296e1269652dcd86,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1195475843648589371, guid: 277e601fff4071e4296e1269652dcd86,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2149116222575607040, guid: 277e601fff4071e4296e1269652dcd86,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2340,10 +2350,30 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2707045651249488619, guid: 277e601fff4071e4296e1269652dcd86,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3436870444069527407, guid: 277e601fff4071e4296e1269652dcd86,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4989241406747223039, guid: 277e601fff4071e4296e1269652dcd86,
         type: 3}
       propertyPath: m_Name
       value: WarningSign
+      objectReference: {fileID: 0}
+    - target: {fileID: 6146046406937801267, guid: 277e601fff4071e4296e1269652dcd86,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7025986866715182602, guid: 277e601fff4071e4296e1269652dcd86,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 277e601fff4071e4296e1269652dcd86, type: 3}
