@@ -29,7 +29,7 @@ public class EarthAnim : MonoBehaviour
         //print("timer " + timer);
         if (counter < 14)
         {
-            if ((int)timer % 2 == 0)
+            if ((int)timer % 20 == 0)
             {
                 timer++;
                 for (int i = 0; i < sprites.Length; i++)
