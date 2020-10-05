@@ -22,7 +22,6 @@ public class Hazard : MonoBehaviour
     protected onCollide collideCannon;
     protected onCollide collideShield;
     FrameTimer timeout = new FrameTimer(5000);
-
     public GameObject boom;
 
     public bool canStopProjectiles = true;
@@ -100,7 +99,7 @@ public class Hazard : MonoBehaviour
         GameObject[] cannonList = GameObject.FindGameObjectsWithTag("Cannon");
         foreach (GameObject proj in lazerList)
         {
-            if(Vector2.Distance(this.transform.position, proj.transform.position) < 0.7f)
+            if(Vector2.Distance(this.transform.position, proj.transform.position) < 0.7f + hitboxSize)
             {
                 if (canStopProjectiles) projDeath(proj);
                 collideLazer();
@@ -109,7 +108,7 @@ public class Hazard : MonoBehaviour
 
         foreach (GameObject proj in cannonList)
         {
-            if (Vector2.Distance(this.transform.position, proj.transform.position) < 1f)
+            if (Vector2.Distance(this.transform.position, proj.transform.position) < 1f + hitboxSize)
             {
                 if (canStopProjectiles) projDeath(proj);
                 collideCannon();

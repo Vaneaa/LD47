@@ -57,7 +57,8 @@ public class Spaceship : MonoBehaviour
         rightSolar = GameObject.Find("SolarArrayR").GetComponent<SpriteRenderer>();
         leftSolarDamaged = GameObject.Find("SolarArrayLDamaged").GetComponent<SpriteRenderer>();
         rightSolarDamaged = GameObject.Find("SolarArrayRDamaged").GetComponent<SpriteRenderer>();
-
+        QualitySettings.vSyncCount = 0;
+        Application.targetFrameRate = 60;
     }
 
     void   FixedUpdate()

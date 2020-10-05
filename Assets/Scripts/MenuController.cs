@@ -15,7 +15,6 @@ public class MenuController : MonoBehaviour
             GameObject obj = GameObject.Instantiate(dynSound, transform.position, Quaternion.identity);
             obj.name = "PreservedCanvas";
             DontDestroyOnLoad(obj);
-
         }
         
     }

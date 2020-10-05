@@ -51,12 +51,12 @@ public class DynamicSoundtrack : MonoBehaviour
     void adjustVolume()
     {
         volPercent = volumeSlider.value;
-        if (melody.volume > 0 && fadeMelody == false) melody.volume = volPercent;
-        if (pulsebass.volume > 0 && fadePulsebass == false) pulsebass.volume = volPercent;
-        if (arp.volume > 0 && fadeArp == false) arp.volume = volPercent;
-        if (snare.volume > 0 && fadeSnareHat == false) snare.volume = volPercent;
-        if (hihat.volume > 0 && fadeSnareHat == false) hihat.volume = volPercent;
-        if (athmo.volume > 0 && fadeAthmo == false) athmo.volume = volPercent;
+        if (fadeMelody == false) melody.volume = volPercent;
+        if (fadePulsebass == false) pulsebass.volume = volPercent;
+        if (fadeArp == false) arp.volume = volPercent;
+        if (fadeSnareHat == false) snare.volume = volPercent;
+        if (fadeSnareHat == false) hihat.volume = volPercent;
+        if (fadeAthmo == false) athmo.volume = volPercent;
         kick.volume = volPercent;
         sonar.volume = volPercent;
         subbass.volume = volPercent;

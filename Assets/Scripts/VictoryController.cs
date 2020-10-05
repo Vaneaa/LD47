@@ -20,7 +20,7 @@ public class VictoryController : MonoBehaviour
 
     public void toMenu()
     {
-        if (dynSound != null) dynSound.onMenu();
+        dynSound.onMenu();
         SceneManager.LoadScene("Title");
     }
 }
