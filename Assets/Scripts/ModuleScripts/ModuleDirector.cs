@@ -25,7 +25,7 @@ public class ModuleDirector : MonoBehaviour
         pathui = GameObject.Find("UpcomingModulePaths").GetComponent<PathUI>();
         plr = GameObject.Find("Spaceship").GetComponent<Spaceship>();
         moduleList = Resources.LoadAll<GameObject>("Modules");
-        setModuleType("a");
+        setModuleType("Unknown");
     }
 
     public void sampleModuleChoices()

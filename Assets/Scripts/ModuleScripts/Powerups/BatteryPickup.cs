@@ -5,11 +5,13 @@ using UnityEngine;
 public class BatteryPickup : Hazard
 {
     bool collected = false;
+    public GameObject sfxObj;
     void pickup()
     {
         if (!collected)
         {
-            plr.GetComponent<Spaceship>().energy += 20f;
+            plr.GetComponent<Spaceship>().energy += 40f;
+            Instantiate(sfxObj, transform.position, Quaternion.identity);
             collected = true;
         }
         Explode();

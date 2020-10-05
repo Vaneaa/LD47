@@ -100,3 +100,6 @@ MonoBehaviour:
   speedBonusMin: 0.1
   shieldDamageMod: 0
   hp: 1
+  boom: {fileID: 0}
+  canStopProjectiles: 1
+  sfxObj: {fileID: 2182307124411986111, guid: 0295d9b5fc0fb7346a8cffcae6f7a3e8, type: 3}

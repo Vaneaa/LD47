@@ -102,6 +102,7 @@ MonoBehaviour:
   shieldDamageMod: 100
   hp: 20
   boom: {fileID: 2182307124411986111, guid: 33026e9d414bbdd47a03c42e804ac833, type: 3}
+  boomSFX: {fileID: 2182307124411986111, guid: d544c80e3faf0834fb3fd6bdcc4fa591, type: 3}
   canStopProjectiles: 1
 --- !u!114 &8608808335007799062
 MonoBehaviour:

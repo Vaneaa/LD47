@@ -23,12 +23,13 @@ public class Hazard : MonoBehaviour
     protected onCollide collideShield;
     FrameTimer timeout = new FrameTimer(5000);
     public GameObject boom;
+    public GameObject boomSFX;
 
     public bool canStopProjectiles = true;
 
     void defaultCollideBase()
     {
-        if (plr.GetComponent<Spaceship>().shieldActive == false) plr.GetComponent<Spaceship>().HP -= hpMax;
+        if (plr.GetComponent<Spaceship>().shieldActive == false) plr.GetComponent<Spaceship>().HP -= hpMax + 9;
         else plr.GetComponent<Spaceship>().energy -= hpMax + shieldDamageMod;
 
         Explode();
@@ -38,8 +39,8 @@ public class Hazard : MonoBehaviour
         //solar array L collision
         if (plr.GetComponent<Spaceship>().shieldActive == false)
         {
-            plr.GetComponent<Spaceship>().leftSolarHP -= hpMax;
-            plr.GetComponent<Spaceship>().HP -= hpMax;
+            plr.GetComponent<Spaceship>().leftSolarHP -= hpMax + 9;
+            plr.GetComponent<Spaceship>().HP -= hpMax + 9;
         }
         else plr.GetComponent<Spaceship>().energy -= hpMax + shieldDamageMod;
         Explode();
@@ -49,8 +50,8 @@ public class Hazard : MonoBehaviour
         //solar array R collision
         if (plr.GetComponent<Spaceship>().shieldActive == false)
         {
-            plr.GetComponent<Spaceship>().rightSolarHP -= hpMax;
-            plr.GetComponent<Spaceship>().HP -= hpMax;
+            plr.GetComponent<Spaceship>().rightSolarHP -= hpMax + 9;
+            plr.GetComponent<Spaceship>().HP -= hpMax + 9;
         }
         else plr.GetComponent<Spaceship>().energy -= hp + shieldDamageMod;
         Explode();
@@ -92,7 +93,7 @@ public class Hazard : MonoBehaviour
     {
         if(timeout.go())
         {
-            Explode();
+            Destroy(this.gameObject);
         }
         //weapon collisions
         GameObject[] lazerList = GameObject.FindGameObjectsWithTag("Lazer");
@@ -148,8 +149,10 @@ public class Hazard : MonoBehaviour
         {
             
             GameObject obj = Instantiate(boom, transform.position, Quaternion.identity);
+            if (boomSFX != null) Instantiate(boomSFX, transform.position, Quaternion.identity);
             obj.transform.localScale = new Vector3(transform.localScale.x * hpMax * 3, transform.localScale.y * hpMax * 3, transform.localScale.z);
         }
+        
         Destroy(this.gameObject);
 
     }

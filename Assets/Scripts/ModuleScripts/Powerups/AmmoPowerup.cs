@@ -5,11 +5,13 @@ using UnityEngine;
 public class AmmoPowerup : Hazard
 {
     bool collected = false;
+    public GameObject sfxObj;
     void pickup()
     {
         if (!collected)
         {
             plr.GetComponent<Spaceship>().ammo += 1;
+            Instantiate(sfxObj, transform.position, Quaternion.identity);
             collected = true;
         }
         Explode();

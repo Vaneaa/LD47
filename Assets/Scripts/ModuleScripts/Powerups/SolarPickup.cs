@@ -4,10 +4,12 @@ using UnityEngine;
 
 public class SolarPickup : Hazard
 {
+    public GameObject sfxObj;
     void pickup()
     {
         plr.GetComponent<Spaceship>().leftSolarHP = 100;
         plr.GetComponent<Spaceship>().rightSolarHP = 100;
+        Instantiate(sfxObj, transform.position, Quaternion.identity);
         Explode();
     }
     void doNothing()

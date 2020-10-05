@@ -10,13 +10,9 @@ public class HazSat : Hazard
     {
         float value = Random.Range(0f, 1f);
         print("rng value: " + value);
-        if(value < 0.05f && fuelDrop != null)
+        if(value < 0.20f && fuelDrop != null)
         {
             
-            Instantiate(energyDrop, transform.position, Quaternion.identity);
-        }
-        else if(value < 0.2f && energyDrop != null)
-        {
             Instantiate(fuelDrop, transform.position, Quaternion.identity);
         }
     }

@@ -111,9 +111,10 @@ MonoBehaviour:
   hitboxSize: 1
   speedBonusMax: 1
   speedBonusMin: 0.1
-  shieldDamageMod: 0
-  hp: 1
+  shieldDamageMod: 35
+  hp: 3
   boom: {fileID: 2182307124411986111, guid: 33026e9d414bbdd47a03c42e804ac833, type: 3}
+  boomSFX: {fileID: 2182307124411986111, guid: d544c80e3faf0834fb3fd6bdcc4fa591, type: 3}
   canStopProjectiles: 1
   energyDrop: {fileID: 5593608786618130861, guid: 62eee5ba3a8d3ae408a78ab1eefef87f,
     type: 3}

@@ -5,11 +5,13 @@ using UnityEngine;
 public class FuelPickup : Hazard
 {
     bool collected = false;
+    public GameObject sfxObj;
     void pickup()
     {
         if (!collected)
         {
-            plr.GetComponent<Spaceship>().fuel += 3f;
+            plr.GetComponent<Spaceship>().fuel += 10f;
+            Instantiate(sfxObj, transform.position, Quaternion.identity);
             collected = true;
         }
         Explode();

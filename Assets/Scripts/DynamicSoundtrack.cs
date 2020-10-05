@@ -19,11 +19,23 @@ public class DynamicSoundtrack : MonoBehaviour
     AudioSource sonar;
     AudioSource subbass;
 
+    public AudioClip _arp;
+    public AudioClip _athmo;
+    public AudioClip _hihat;
+    public AudioClip _kick;
+    public AudioClip _melody;
+    public AudioClip _pulsebass;
+    public AudioClip _snare;
+    public AudioClip _sonar;
+    public AudioClip _subbass;
+
     bool fadeMelody = false;
     bool fadePulsebass = false;
     bool fadeArp = false;
     bool fadeSnareHat = false;
     bool fadeAthmo = false;
+
+    bool loaded = false;
 
     Spaceship plr;
     void Start()
@@ -40,6 +52,53 @@ public class DynamicSoundtrack : MonoBehaviour
         snare = transform.GetChild(6).GetComponent<AudioSource>();
         sonar = transform.GetChild(7).GetComponent<AudioSource>();
         subbass = transform.GetChild(8).GetComponent<AudioSource>();
+
+        _arp = Resources.Load<AudioClip>("Soundtrack/tracklist/arp");
+        _athmo = Resources.Load<AudioClip>("Soundtrack/tracklist/athmo");
+        _hihat = Resources.Load<AudioClip>("Soundtrack/tracklist/hi-hat");
+        _kick = Resources.Load<AudioClip>("Soundtrack/tracklist/heartbeat");
+        _melody = Resources.Load<AudioClip>("Soundtrack/tracklist/melody");
+        _pulsebass = Resources.Load<AudioClip>("Soundtrack/tracklist/pulse_bass");
+        _snare = Resources.Load<AudioClip>("Soundtrack/tracklist/snare");
+        _sonar = Resources.Load<AudioClip>("Soundtrack/tracklist/sonar");
+        _subbass = Resources.Load<AudioClip>("Soundtrack/tracklist/sub");
+    }
+
+
+    void checkLoadStatus()
+    {
+        if (loaded == false &&
+            _arp.loadState == AudioDataLoadState.Loaded &&
+            _athmo.loadState == AudioDataLoadState.Loaded &&
+            _hihat.loadState == AudioDataLoadState.Loaded &&
+            _kick.loadState == AudioDataLoadState.Loaded &&
+            _melody.loadState == AudioDataLoadState.Loaded&&
+            _pulsebass.loadState == AudioDataLoadState.Loaded&&
+            _snare.loadState == AudioDataLoadState.Loaded &&
+            _subbass.loadState == AudioDataLoadState.Loaded)
+        {
+
+            arp.clip = _arp;
+            athmo.clip = _athmo;
+            hihat.clip = _hihat;
+            kick.clip = _kick;
+            melody.clip = _melody;
+            pulsebass.clip = _pulsebass;
+            snare.clip = _snare;
+            sonar.clip = _sonar;
+            subbass.clip = _subbass;
+
+            loaded = true;
+            arp.Play();
+            athmo.Play();
+            hihat.Play();
+            kick.Play();
+            melody.Play();
+            pulsebass.Play();
+            snare.Play();
+            sonar.Play();
+            subbass.Play();
+        }
     }
 
     void fadeOut(AudioSource track, float fadeStr)
@@ -106,43 +165,49 @@ public class DynamicSoundtrack : MonoBehaviour
         subbass.volume = volPercent;
     }
 
+
     void Update()
     {
-        if(GameObject.Find("Spaceship"))
+        checkLoadStatus();
+        if(loaded == true)
         {
-            plr = GameObject.Find("Spaceship").GetComponent<Spaceship>();
-        }
-        adjustVolume();
+            if (GameObject.Find("Spaceship"))
+            {
+                plr = GameObject.Find("Spaceship").GetComponent<Spaceship>();
+            }
+            adjustVolume();
 
-        if(plr != null && volumeFade.go())
-        {
-            if (plr.HP < 90)
+            if (plr != null && volumeFade.go())
             {
-                fadeOut(melody, 0.005f);
-                fadeMelody = true;
-            }
-            if (plr.HP < 70)
-            {
-                fadeOut(pulsebass, 0.01f);
-                fadePulsebass = true;
-            }
-            if (plr.HP < 50)
-            {
-                fadeOut(arp, 0.01f);
-                fadeArp = true;
-            }
-            if (plr.HP < 30)
-            {
-                fadeOut(snare, 0.01f);
-                fadeOut(hihat, 0.01f);
-                fadeSnareHat = true;
-            }
-            if (plr.HP < 20)
-            {
-                fadeOut(athmo, 0.01f);
-                fadeAthmo = true;
+                if (plr.HP < 90)
+                {
+                    fadeOut(melody, 0.005f);
+                    fadeMelody = true;
+                }
+                if (plr.HP < 70)
+                {
+                    fadeOut(pulsebass, 0.01f);
+                    fadePulsebass = true;
+                }
+                if (plr.HP < 50)
+                {
+                    fadeOut(arp, 0.01f);
+                    fadeArp = true;
+                }
+                if (plr.HP < 30)
+                {
+                    fadeOut(snare, 0.01f);
+                    fadeOut(hihat, 0.01f);
+                    fadeSnareHat = true;
+                }
+                if (plr.HP < 20)
+                {
+                    fadeOut(athmo, 0.01f);
+                    fadeAthmo = true;
+                }
             }
         }
+
 
     }
 }

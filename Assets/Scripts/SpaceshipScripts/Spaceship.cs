@@ -30,6 +30,9 @@ public class Spaceship : MonoBehaviour
     public Lazer lazer;
     GameObject shield;
     GameObject cannon;
+    public GameObject thruster;
+    public GameObject laserSFX;
+    public GameObject cannonSFX;
     SpriteAnimator shieldAnimator;
 
     public float shieldEnergyCost = 0.35f;
@@ -57,6 +60,7 @@ public class Spaceship : MonoBehaviour
         rightSolar = GameObject.Find("SolarArrayR").GetComponent<SpriteRenderer>();
         leftSolarDamaged = GameObject.Find("SolarArrayLDamaged").GetComponent<SpriteRenderer>();
         rightSolarDamaged = GameObject.Find("SolarArrayRDamaged").GetComponent<SpriteRenderer>();
+        thruster = GameObject.Find("Thruster");
         QualitySettings.vSyncCount = 0;
         Application.targetFrameRate = 60;
     }
@@ -66,7 +70,7 @@ public class Spaceship : MonoBehaviour
         //shield energy drain
         if (shieldActive == true && energy > shieldEnergyCost)
         {
-            if (shieldEnergyDrain.go()) energy -= 0;
+            if (shieldEnergyDrain.go()) energy -= 0.001f;
         }
         else setShieldStatus(false);
         
@@ -127,9 +131,9 @@ public class Spaceship : MonoBehaviour
         //get lazer input
         if (lazerShotDelay.go() && Input.GetButton("Lazer"))
         {
-            if (energy >= 0.25f)
+            if (energy >= 0.5f)
             {
-                energy -= 0.15f;
+                energy -= 0.5f;
                 ShootLazer();
             }
 
@@ -201,26 +205,29 @@ public class Spaceship : MonoBehaviour
         else if(fuel < 0){
             fuel = 0;
         }
-        
+
         // Thrusting
-        if (fuel > 0.009f)
+        float fuelCost = 0.02f;
+        float horizontalSpeedMod = 0.005f;
+        if (fuel > fuelCost)
         {
             if (horizontalMove.x != 0)
             {
-                fuel = fuel - 0.01f;
+                fuel = fuel - fuelCost;
                 if (horizontalMove.x > 0)
                 {
-                    
-                    spaceshipHorizontalSpeed = spaceshipHorizontalSpeed + speedModifier;
+                    thruster.GetComponent<SpriteRenderer>().enabled = true;
+                    spaceshipHorizontalSpeed = spaceshipHorizontalSpeed + speedModifier + horizontalSpeedMod;
                 }
                 else
                 {
-                    spaceshipHorizontalSpeed = spaceshipHorizontalSpeed - speedModifier * 0.75f;
+                    thruster.GetComponent<SpriteRenderer>().enabled = false;
+                    spaceshipHorizontalSpeed = spaceshipHorizontalSpeed - (speedModifier + horizontalSpeedMod) * 0.75f;
                 }
-            }
+            } else thruster.GetComponent<SpriteRenderer>().enabled = false;
             if (verticalMove.y != 0)
             {
-                fuel = fuel - 0.01f;
+                fuel = fuel - fuelCost;
                 if (verticalMove.y > 0)
                 {
                     if(spaceshipVerticalSpeed >= 0)
@@ -251,13 +258,14 @@ public class Spaceship : MonoBehaviour
         }
 
         // Horizontal movement natural slow down
+        float speedDecay = 0.3f;
         if(spaceshipHorizontalSpeed > 0)
         {
-            spaceshipHorizontalSpeed = spaceshipHorizontalSpeed - speedModifier * 0.05f;
+            spaceshipHorizontalSpeed = spaceshipHorizontalSpeed - speedModifier * speedDecay;
         }
         else if (spaceshipHorizontalSpeed < 0)
         {
-            spaceshipHorizontalSpeed = spaceshipHorizontalSpeed + speedModifier * 0.05f;
+            spaceshipHorizontalSpeed = spaceshipHorizontalSpeed + speedModifier * speedDecay;
         }
 
 
@@ -316,10 +324,12 @@ public class Spaceship : MonoBehaviour
     {
         print(lazer);
         Instantiate(lazer, new Vector3(transform.position.x, transform.position.y, 0), transform.rotation);
+        Instantiate(laserSFX, transform.position, Quaternion.identity);
     }
 
     void FireCannon()
     {
         Instantiate(cannon, new Vector3(transform.position.x, transform.position.y, 0), transform.rotation);
+        Instantiate(cannonSFX, transform.position, Quaternion.identity);
     }
 }

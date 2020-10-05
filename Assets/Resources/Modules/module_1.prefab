@@ -106,7 +106,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moduleDirector: {fileID: 0}
   speedMod: 0.005
-  type: b
+  type: Unknown
 --- !u!1001 &413612860007801752
 PrefabInstance:
   m_ObjectHideFlags: 0
