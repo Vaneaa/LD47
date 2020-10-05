@@ -28,7 +28,6 @@ public class WarningSign : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        print(player.danger);
         if(player.danger){
             WarningPanel.enabled = true;
         }else{
