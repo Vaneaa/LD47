@@ -77,12 +77,30 @@ public class DynamicSoundtrack : MonoBehaviour
 
     public void onMenu()
     {
-        melody.volume = volPercent;
+        melody.volume = 0;
         pulsebass.volume = 0;
         arp.volume = 0;
         snare.volume = 0;
         hihat.volume = 0;
         athmo.volume = 0;
+        kick.volume = volPercent;
+        sonar.volume = volPercent;
+        subbass.volume = volPercent;
+    }
+
+    public void onVictory()
+    {
+        fadeMelody = false;
+        fadePulsebass = false;
+        fadeArp = false;
+        fadeSnareHat = false;
+        fadeAthmo = false;
+        melody.volume = volPercent;
+        pulsebass.volume = volPercent;
+        arp.volume = volPercent;
+        snare.volume = volPercent;
+        hihat.volume = volPercent;
+        athmo.volume = volPercent;
         kick.volume = volPercent;
         sonar.volume = volPercent;
         subbass.volume = volPercent;
