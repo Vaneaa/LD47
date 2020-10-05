@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class VelocoraptorMeter : MonoBehaviour
 {
     UnityEngine.UI.Text display;
@@ -27,8 +28,8 @@ public class VelocoraptorMeter : MonoBehaviour
     void Update()
     {
         display.text = plr.spaceshipHorizontalSpeed.ToString();
-        fuelDisplay.text = plr.fuel.ToString();
-        energyDisplay.text = plr.energy.ToString() + "(+" + plr.solarEfficiency.ToString() + ")";
+        fuelDisplay.text = Mathf.Floor(plr.fuel).ToString();
+        energyDisplay.text = Mathf.Floor(plr.energy).ToString() + "(+" + plr.solarEfficiency.ToString() + ")";
         ammoDisplay.text = plr.ammo.ToString();
         hpDisplay.text = plr.HP.ToString();
     }
