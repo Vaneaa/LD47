@@ -62,10 +62,41 @@ public class DynamicSoundtrack : MonoBehaviour
         subbass.volume = volPercent;
     }
 
+    public void onPlay()
+    {
+        melody.volume = volPercent;
+        pulsebass.volume = volPercent;
+        arp.volume = volPercent;
+        snare.volume = volPercent;
+        hihat.volume = volPercent;
+        athmo.volume = volPercent;
+        kick.volume = volPercent;
+        sonar.volume = volPercent;
+        subbass.volume = volPercent;
+    }
+
+    public void onMenu()
+    {
+        melody.volume = volPercent;
+        pulsebass.volume = 0;
+        arp.volume = 0;
+        snare.volume = 0;
+        hihat.volume = 0;
+        athmo.volume = 0;
+        kick.volume = volPercent;
+        sonar.volume = volPercent;
+        subbass.volume = volPercent;
+    }
+
     void Update()
     {
+        if(GameObject.Find("Spaceship"))
+        {
+            plr = GameObject.Find("Spaceship").GetComponent<Spaceship>();
+        }
         adjustVolume();
-        if(volumeFade.go())
+
+        if(plr != null && volumeFade.go())
         {
             if (plr.HP < 90)
             {

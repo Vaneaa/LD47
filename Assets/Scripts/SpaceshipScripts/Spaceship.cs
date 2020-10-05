@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Collections.Specialized;
 using System.Threading;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Spaceship : MonoBehaviour
 {
@@ -68,6 +69,11 @@ public class Spaceship : MonoBehaviour
         }
         else setShieldStatus(false);
         
+        if(fail)
+        {
+            GameObject.Find("DynamicSoundtrack").GetComponent<DynamicSoundtrack>().onMenu();
+            SceneManager.LoadScene("Title");
+        }
         
     }
 
