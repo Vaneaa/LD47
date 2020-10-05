@@ -1,7 +1,307 @@
 fileFormatVersion: 2
 guid: 7c9f26bf62f9d5f47bc4255b999798fd
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 2561097182106847366
+    second: Planet_background_0
+  - first:
+      213: -5973040007834062916
+    second: Planet_background_1
+  - first:
+      213: -1834465806506037748
+    second: Planet_background_2
+  - first:
+      213: -9089955030593253137
+    second: Planet_background_3
+  - first:
+      213: -4958945658545733027
+    second: Planet_background_4
+  - first:
+      213: 7189985112518975378
+    second: Planet_background_5
+  - first:
+      213: 4683394263154099488
+    second: Planet_background_6
+  - first:
+      213: 6401798541424285610
+    second: Planet_background_7
+  - first:
+      213: -1902166744274766407
+    second: Planet_background_8
+  - first:
+      213: -961677422872065839
+    second: Planet_background_9
+  - first:
+      213: 6495220927201825467
+    second: Planet_background_10
+  - first:
+      213: -7316435075261270076
+    second: Planet_background_11
+  - first:
+      213: -8262802432335302295
+    second: Planet_background_12
+  - first:
+      213: 5151872063715424313
+    second: Planet_background_13
+  - first:
+      213: -4705644015673302154
+    second: Planet_background_14
+  - first:
+      213: -3288566543889467469
+    second: Planet_background_15
+  - first:
+      213: 8856532410165730228
+    second: Planet_background_16
+  - first:
+      213: -5633100748586892815
+    second: Planet_background_17
+  - first:
+      213: -4366032580162272957
+    second: Planet_background_18
+  - first:
+      213: -6957352365200258837
+    second: Planet_background_19
+  - first:
+      213: -4708492704849792585
+    second: Planet_background_20
+  - first:
+      213: 6061265367104199920
+    second: Planet_background_21
+  - first:
+      213: 4553514495230554514
+    second: Planet_background_22
+  - first:
+      213: 7571773273207101139
+    second: Planet_background_23
+  - first:
+      213: 3146260016463031602
+    second: Planet_background_24
+  - first:
+      213: 5730838383087912505
+    second: Planet_background_25
+  - first:
+      213: -1019826575753938441
+    second: Planet_background_26
+  - first:
+      213: 7219694325947942348
+    second: Planet_background_27
+  - first:
+      213: 6981135215536594135
+    second: Planet_background_28
+  - first:
+      213: 9178799395338757828
+    second: Planet_background_29
+  - first:
+      213: 151167440056956238
+    second: Planet_background_30
+  - first:
+      213: 3153936298220218626
+    second: Planet_background_31
+  - first:
+      213: -6424980154100461043
+    second: Planet_background_32
+  - first:
+      213: -5670441173297292265
+    second: Planet_background_33
+  - first:
+      213: -3529464037457765673
+    second: Planet_background_34
+  - first:
+      213: -1411526693696444351
+    second: Planet_background_35
+  - first:
+      213: 6319673946726143402
+    second: Planet_background_36
+  - first:
+      213: -2540010618030051
+    second: Planet_background_37
+  - first:
+      213: -4624098043361020761
+    second: Planet_background_38
+  - first:
+      213: -879477299136995141
+    second: Planet_background_39
+  - first:
+      213: 7098918880610077209
+    second: Planet_background_40
+  - first:
+      213: -6477368860026863243
+    second: Planet_background_41
+  - first:
+      213: -7962603787351928271
+    second: Planet_background_42
+  - first:
+      213: 1740409262546521862
+    second: Planet_background_43
+  - first:
+      213: -2654739449982942358
+    second: Planet_background_44
+  - first:
+      213: 8562512451906184685
+    second: Planet_background_45
+  - first:
+      213: -6511010902714602898
+    second: Planet_background_46
+  - first:
+      213: 4753843560010732797
+    second: Planet_background_47
+  - first:
+      213: -8039350052919763193
+    second: Planet_background_48
+  - first:
+      213: -7144518116122469479
+    second: Planet_background_49
+  - first:
+      213: 8461134964037039959
+    second: Planet_background_50
+  - first:
+      213: -3116665067887206837
+    second: Planet_background_51
+  - first:
+      213: 2908439302520223614
+    second: Planet_background_52
+  - first:
+      213: 3095208796125470711
+    second: Planet_background_53
+  - first:
+      213: 243486882290960546
+    second: Planet_background_54
+  - first:
+      213: -4227362135521582245
+    second: Planet_background_55
+  - first:
+      213: -5497150599364393020
+    second: Planet_background_56
+  - first:
+      213: 2077673330775278042
+    second: Planet_background_57
+  - first:
+      213: -2235606002143314980
+    second: Planet_background_58
+  - first:
+      213: -8214472206620972867
+    second: Planet_background_59
+  - first:
+      213: -7963702385257575810
+    second: Planet_background_60
+  - first:
+      213: -7203497976441319072
+    second: Planet_background_61
+  - first:
+      213: -1134034232557829991
+    second: Planet_background_62
+  - first:
+      213: 3335156689077815252
+    second: Planet_background_63
+  - first:
+      213: -7489795654075012607
+    second: Planet_background_64
+  - first:
+      213: -7166228715924524799
+    second: Planet_background_65
+  - first:
+      213: -4030357652216800914
+    second: Planet_background_66
+  - first:
+      213: -8572482318480863025
+    second: Planet_background_67
+  - first:
+      213: 940553859125635565
+    second: Planet_background_68
+  - first:
+      213: -4947301784186254886
+    second: Planet_background_69
+  - first:
+      213: -6613284355657348886
+    second: Planet_background_70
+  - first:
+      213: 8713009590067183973
+    second: Planet_background_71
+  - first:
+      213: -1149663581652980969
+    second: Planet_background_72
+  - first:
+      213: 3506967647998120925
+    second: Planet_background_73
+  - first:
+      213: 3057686145963608965
+    second: Planet_background_74
+  - first:
+      213: -2348573397523577792
+    second: Planet_background_75
+  - first:
+      213: -5257452762747007440
+    second: Planet_background_76
+  - first:
+      213: 7485333425198431222
+    second: Planet_background_77
+  - first:
+      213: -4461380018419159907
+    second: Planet_background_78
+  - first:
+      213: 5142650431902329639
+    second: Planet_background_79
+  - first:
+      213: 5680555763173505084
+    second: Planet_background_80
+  - first:
+      213: -7644789341736569275
+    second: Planet_background_81
+  - first:
+      213: 2767749041139364255
+    second: Planet_background_82
+  - first:
+      213: -720252861009263220
+    second: Planet_background_83
+  - first:
+      213: 75898486681769699
+    second: Planet_background_84
+  - first:
+      213: -6850006552265876653
+    second: Planet_background_85
+  - first:
+      213: -3356955926932167816
+    second: Planet_background_86
+  - first:
+      213: -5562886721712267931
+    second: Planet_background_87
+  - first:
+      213: -8639976354513213818
+    second: Planet_background_88
+  - first:
+      213: 4386017640406238765
+    second: Planet_background_89
+  - first:
+      213: 2581320152636525566
+    second: Planet_background_90
+  - first:
+      213: -7047252366745440634
+    second: Planet_background_91
+  - first:
+      213: -2492144982170407007
+    second: Planet_background_92
+  - first:
+      213: 2968158797831069677
+    second: Planet_background_93
+  - first:
+      213: 6168820883035254665
+    second: Planet_background_94
+  - first:
+      213: 7382571797508552801
+    second: Planet_background_95
+  - first:
+      213: 9074053891309913092
+    second: Planet_background_96
+  - first:
+      213: 7295454947975102135
+    second: Planet_background_97
+  - first:
+      213: 7245060438440623345
+    second: Planet_background_98
+  - first:
+      213: 5992982932417963606
+    second: Planet_background_99
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -31,7 +331,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: -1
+    filterMode: 0
     aniso: -1
     mipBias: -100
     wrapU: 1
@@ -40,7 +340,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -64,7 +364,31 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -73,7 +397,301 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Planet_background_0
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 1628
+        width: 300
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6888bbe5158da8320800000000000000
+      internalID: 2561097182106847366
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Planet_background_1
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 1503
+        width: 300
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cbfaad762cf7b1da0800000000000000
+      internalID: -5973040007834062916
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Planet_background_2
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 1378
+        width: 300
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0e6b92811baa86e0800000000000000
+      internalID: -1834465806506037748
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Planet_background_3
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 1253
+        width: 300
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe0d6317f0ef9d180800000000000000
+      internalID: -9089955030593253137
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Planet_background_4
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 1128
+        width: 300
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d528ae972394e2bb0800000000000000
+      internalID: -4958945658545733027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Planet_background_5
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 1003
+        width: 300
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29f5a0c9d55f7c360800000000000000
+      internalID: 7189985112518975378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Planet_background_6
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 878
+        width: 300
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0250766c442cef040800000000000000
+      internalID: 4683394263154099488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Planet_background_7
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 753
+        width: 300
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa75531fad1c7d850800000000000000
+      internalID: 6401798541424285610
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Planet_background_8
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 628
+        width: 300
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b5f0f79c652a95e0800000000000000
+      internalID: -1902166744274766407
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Planet_background_9
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 503
+        width: 300
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d88235aa7f67a2f0800000000000000
+      internalID: -961677422872065839
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Planet_background_10
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 378
+        width: 300
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb25c872509a32a50800000000000000
+      internalID: 6495220927201825467
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Planet_background_11
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 253
+        width: 300
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c7f7dc201dc67a90800000000000000
+      internalID: -7316435075261270076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Planet_background_12
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 128
+        width: 300
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 961bb6b47f0a45d80800000000000000
+      internalID: -8262802432335302295
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Planet_background_13
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 3
+        width: 300
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 938340e98502f7740800000000000000
+      internalID: 5151872063715424313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []

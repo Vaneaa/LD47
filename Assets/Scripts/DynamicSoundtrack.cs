@@ -28,7 +28,7 @@ public class DynamicSoundtrack : MonoBehaviour
     Spaceship plr;
     void Start()
     {
-        plr = GameObject.Find("Spaceship").GetComponent<Spaceship>();
+        //plr = GameObject.Find("Spaceship").GetComponent<Spaceship>();
         volumeSlider = GameObject.Find("Slider").GetComponent<UnityEngine.UI.Slider>();
         volumeSlider.value = volPercent;
         arp = transform.GetChild(0).GetComponent<AudioSource>();
@@ -64,6 +64,7 @@ public class DynamicSoundtrack : MonoBehaviour
 
     void Update()
     {
+        if(GameObject)
         adjustVolume();
         if(volumeFade.go())
         {
