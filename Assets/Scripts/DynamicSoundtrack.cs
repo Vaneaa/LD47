@@ -19,6 +19,12 @@ public class DynamicSoundtrack : MonoBehaviour
     AudioSource sonar;
     AudioSource subbass;
 
+    bool fadeMelody = false;
+    bool fadePulsebass = false;
+    bool fadeArp = false;
+    bool fadeSnareHat = false;
+    bool fadeAthmo = false;
+
     Spaceship plr;
     void Start()
     {
@@ -45,38 +51,47 @@ public class DynamicSoundtrack : MonoBehaviour
     void adjustVolume()
     {
         volPercent = volumeSlider.value;
-        if (melody.volume > 0) melody.volume /= volPercent;
-        if (pulsebass.volume > 0) pulsebass.volume /= volPercent;
-        if (arp.volume > 0) arp.volume /= volPercent;
-        if (snare.volume > 0) snare.volume /= volPercent;
-        if (hihat.volume > 0) hihat.volume /= volPercent;
-        if (athmo.volume > 0) athmo.volume /= volPercent;
+        if (melody.volume > 0 && fadeMelody == false) melody.volume = volPercent;
+        if (pulsebass.volume > 0 && fadePulsebass == false) pulsebass.volume = volPercent;
+        if (arp.volume > 0 && fadeArp == false) arp.volume = volPercent;
+        if (snare.volume > 0 && fadeSnareHat == false) snare.volume = volPercent;
+        if (hihat.volume > 0 && fadeSnareHat == false) hihat.volume = volPercent;
+        if (athmo.volume > 0 && fadeAthmo == false) athmo.volume = volPercent;
+        kick.volume = volPercent;
+        sonar.volume = volPercent;
+        subbass.volume = volPercent;
     }
 
     void Update()
     {
+        adjustVolume();
         if(volumeFade.go())
         {
             if (plr.HP < 90)
             {
                 fadeOut(melody, 0.005f);
+                fadeMelody = true;
             }
             if (plr.HP < 70)
             {
                 fadeOut(pulsebass, 0.01f);
+                fadePulsebass = true;
             }
             if (plr.HP < 50)
             {
                 fadeOut(arp, 0.01f);
+                fadeArp = true;
             }
             if (plr.HP < 30)
             {
                 fadeOut(snare, 0.01f);
                 fadeOut(hihat, 0.01f);
+                fadeSnareHat = true;
             }
             if (plr.HP < 20)
             {
                 fadeOut(athmo, 0.01f);
+                fadeAthmo = true;
             }
         }
 

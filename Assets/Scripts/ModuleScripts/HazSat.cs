@@ -4,17 +4,20 @@ using UnityEngine;
 
 public class HazSat : Hazard
 {
-    GameObject energyDrop;
-    GameObject fuelDrop;
+    public GameObject energyDrop;
+    public GameObject fuelDrop;
     private void OnDestroy()
     {
-        if(Random.Range(0,1) < 0.1f && fuelDrop != null)
+        float value = Random.Range(0f, 1f);
+        print("rng value: " + value);
+        if(value < 0.05f && fuelDrop != null)
+        {
+            
+            Instantiate(energyDrop, transform.position, Quaternion.identity);
+        }
+        else if(value < 0.2f && energyDrop != null)
         {
             Instantiate(fuelDrop, transform.position, Quaternion.identity);
-        }
-        else if(Random.Range(0,1) < 0.2f && energyDrop != null)
-        {
-            Instantiate(energyDrop, transform.position, Quaternion.identity);
         }
     }
 

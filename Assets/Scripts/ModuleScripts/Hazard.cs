@@ -21,7 +21,7 @@ public class Hazard : MonoBehaviour
     protected onCollide collideLazer;
     protected onCollide collideCannon;
     protected onCollide collideShield;
-    FrameTimer timeout = new FrameTimer(1300);
+    FrameTimer timeout = new FrameTimer(5000);
 
     public GameObject boom;
 
